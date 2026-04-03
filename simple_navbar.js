@@ -24,7 +24,7 @@ const buildSimpleNav = (activeHref) => {
   }).join('\n');
 
   return `<!-- Top Navigation Bar -->
-<nav class="w-full top-0 sticky h-[72px] z-50 bg-white border-b border-stone-100">
+<nav class="w-full top-0 fixed h-[72px] z-50 bg-white border-b border-stone-100">
 <div class="flex justify-between items-center w-full px-6 md:px-12 max-w-screen-2xl mx-auto h-full">
   <div class="text-[22px] font-serif text-emerald-900 tracking-tight font-headline">Yoga Sanjeevini</div>
   <div class="hidden md:flex items-center space-x-8">
