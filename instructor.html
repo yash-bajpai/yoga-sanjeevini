@@ -133,23 +133,26 @@
 <!-- End Mobile Navigation Drawer -->
 
 <!-- Top Navigation Bar -->
-<nav id="main-nav" class="docked full-width w-full top-0 fixed h-[80px] z-50 transition-all duration-500 ease-in-out bg-black/30 backdrop-blur-md">
-<div class="flex justify-between items-center w-full px-4 md:px-12 max-w-screen-2xl mx-auto h-full">
-<div class="text-2xl font-serif text-white tracking-tight font-headline nav-brand">Yoga Sanjeevini</div>
-<div class="hidden md:flex items-center space-x-10">
-<a class="font-label text-xs uppercase tracking-widest nav-link text-white/75 font-medium hover:text-white transition-colors duration-300" href="index.html">Home</a>
-<a class="font-label text-xs uppercase tracking-widest nav-link text-white/75 font-medium hover:text-white transition-colors duration-300" href="yoga-details.html">Classical Hatha Yoga</a>
-<a class="font-label text-xs uppercase tracking-widest nav-link text-white/90 border-b-2 border-white/50 pb-1" href="instructor.html">About Instructor</a>
-<a class="font-label text-xs uppercase tracking-widest nav-link text-white/75 font-medium hover:text-white transition-colors duration-300" href="faq.html">Benefits</a>
-<a class="font-label text-xs uppercase tracking-widest nav-link text-white/75 font-medium hover:text-white transition-colors duration-300" href="faq.html">FAQ</a>
+<nav class="w-full top-0 sticky h-[72px] z-50 bg-white border-b border-stone-100">
+<div class="flex justify-between items-center w-full px-6 md:px-12 max-w-screen-2xl mx-auto h-full">
+  <div class="text-[22px] font-serif text-emerald-900 tracking-tight font-headline">Yoga Sanjeevini</div>
+  <div class="hidden md:flex items-center space-x-8">
+<a class="text-stone-500 font-label text-[11px] font-semibold uppercase tracking-[0.15em] hover:text-emerald-700 transition-colors duration-200" href="index.html">Home</a>
+<a class="text-stone-500 font-label text-[11px] font-semibold uppercase tracking-[0.15em] hover:text-emerald-700 transition-colors duration-200" href="yoga-details.html">Classical Hatha Yoga</a>
+<a class="text-emerald-700 border-b-2 border-emerald-600 pb-0.5 font-label text-[11px] font-semibold uppercase tracking-[0.15em]" href="instructor.html">About Instructor</a>
+<a class="text-stone-500 font-label text-[11px] font-semibold uppercase tracking-[0.15em] hover:text-emerald-700 transition-colors duration-200" href="faq.html">Benefits</a>
+<a class="text-stone-500 font-label text-[11px] font-semibold uppercase tracking-[0.15em] hover:text-emerald-700 transition-colors duration-200" href="faq.html">FAQ</a>
+  </div>
+  <div class="hidden md:block">
+    <button class="bg-[#1a3d30] text-white px-7 py-3 rounded-full font-label text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-emerald-900 transition-colors duration-200">
+      Start Your Journey
+    </button>
+  </div>
+  <button id="mobile-menu-open" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-emerald-900/10 text-emerald-900 border border-emerald-900/20 hover:bg-emerald-900/20 transition-all duration-200" aria-label="Open menu">
+    <span class="material-symbols-outlined text-2xl">menu</span>
+  </button>
 </div>
-<div class="hidden md:block"><button class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-3 rounded-full font-label text-xs uppercase tracking-widest hover:bg-white hover:text-emerald-900 transition-all duration-300 shadow-sm nav-cta">
-                Start Your Journey
-            </button></div>
-<button id="mobile-menu-open" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 transition-all duration-300" aria-label="Open menu">
-                <span class="material-symbols-outlined text-2xl">menu</span>
-            </button>
-            </nav>
+</nav>
 <main class="pt-32 pb-24 px-6 md:px-6 md:px-12 max-w-screen-2xl mx-auto">
 <!-- Hero Section: Editorial Split -->
 <div class="grid grid-cols-1 lg:grid-cols-10 gap-16 lg:gap-24 items-start">
@@ -335,69 +338,7 @@
         </svg>
     </a>
 </div>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const nav = document.getElementById("main-nav");
-        if (!nav) return;
 
-        const brand = nav.querySelector(".nav-brand");
-        const links = nav.querySelectorAll(".nav-link");
-        const cta = nav.querySelector(".nav-cta");
-
-        let isScrolled = false;
-
-        const setScrolledState = () => {
-            if (isScrolled) return;
-            isScrolled = true;
-            nav.classList.remove("bg-black/30", "backdrop-blur-md");
-            nav.classList.add("bg-white/80", "backdrop-blur-xl", "shadow-sm", "border-b", "border-stone-100");
-
-            if (brand) { brand.classList.remove("text-white"); brand.classList.add("text-emerald-900"); }
-            links.forEach((link, i) => {
-                link.classList.remove("text-white/90", "text-white/75", "border-white/50", "hover:text-white");
-                if (link.classList.contains("border-b-2")) {
-                    link.classList.add("text-emerald-900", "border-yellow-700/50");
-                    link.classList.remove("border-white/50");
-                } else {
-                    link.classList.add("text-stone-600", "hover:text-emerald-700");
-                }
-            });
-            if (cta) {
-                cta.classList.remove("bg-white/20", "border-white/30", "text-white", "hover:text-emerald-900");
-                cta.classList.add("bg-primary", "text-white", "border-transparent");
-            }
-        };
-
-        const setTopState = () => {
-            if (!isScrolled) return;
-            isScrolled = false;
-            nav.classList.add("bg-black/30", "backdrop-blur-md");
-            nav.classList.remove("bg-white/80", "backdrop-blur-xl", "shadow-sm", "border-b", "border-stone-100");
-
-            if (brand) { brand.classList.add("text-white"); brand.classList.remove("text-emerald-900"); }
-            links.forEach((link, i) => {
-                link.classList.remove("text-emerald-900", "text-stone-600", "border-yellow-700/50", "hover:text-emerald-700");
-                if (link.classList.contains("border-b-2")) {
-                    link.classList.add("text-white/90", "border-white/50");
-                } else {
-                    link.classList.add("text-white/75", "hover:text-white");
-                }
-            });
-            if (cta) {
-                cta.classList.add("bg-white/20", "border-white/30", "text-white", "hover:text-emerald-900");
-                cta.classList.remove("bg-primary", "border-transparent");
-            }
-        };
-
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 60) {
-                setScrolledState();
-            } else {
-                setTopState();
-            }
-        });
-    });
-</script>
 
 <!-- Global Registration Modal -->
 <div id="registration-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
