@@ -71,6 +71,8 @@
         }
     </script>
 <style>
+        html, body { overflow-x: hidden; }
+
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             display: inline-block;
@@ -103,25 +105,60 @@
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[90] opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
+<div id="mobile-menu-drawer" class="fixed top-0 right-0 h-full w-[80vw] max-w-[320px] bg-white z-[95] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden shadow-2xl flex flex-col">
+    <div class="flex items-center justify-between px-6 py-5 border-b border-stone-100">
+        <span class="font-headline text-lg text-emerald-900">Yoga Sanjeevini</span>
+        <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center rounded-full bg-stone-100 text-stone-600 hover:bg-stone-200 transition-colors" aria-label="Close menu">
+            <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+    </div>
+    <nav class="flex flex-col gap-1 px-4 py-6 flex-grow">
+        <a href="index.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3.5 rounded-xl text-stone-700 font-label text-sm uppercase tracking-widest hover:bg-stone-50 transition-colors">
+            <span class="material-symbols-outlined text-lg text-emerald-700">home</span>Home
+        </a>
+        <a href="yoga-details.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3.5 rounded-xl text-stone-700 font-label text-sm uppercase tracking-widest hover:bg-stone-50 transition-colors">
+            <span class="material-symbols-outlined text-lg text-emerald-700">self_improvement</span>Classical Hatha Yoga
+        </a>
+        <a href="instructor.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3.5 rounded-xl text-stone-700 font-label text-sm uppercase tracking-widest hover:bg-stone-50 transition-colors">
+            <span class="material-symbols-outlined text-lg text-emerald-700">person</span>About Instructor
+        </a>
+        <a href="faq.html" class="mobile-nav-link flex items-center gap-3 px-4 py-3.5 rounded-xl text-stone-700 font-label text-sm uppercase tracking-widest hover:bg-stone-50 transition-colors">
+            <span class="material-symbols-outlined text-lg text-emerald-700">spa</span>Benefits &amp; FAQ
+        </a>
+    </nav>
+    <div class="px-4 py-6 border-t border-stone-100">
+        <button class="w-full bg-[#104738] text-white px-6 py-4 rounded-full font-label text-sm uppercase tracking-widest font-bold hover:bg-[#0d3a2e] transition-all duration-300 shadow-md mobile-cta-btn">
+            Start Your Journey
+        </button>
+    </div>
+</div>
+<!-- End Mobile Navigation Drawer -->
+
 <!-- Top Navigation Bar -->
-<nav class="docked full-width w-full top-0 fixed h-[80px] z-50    transition-all duration-700 cubic-bezier(0.2,0,0,1) bg-transparent">
-<div class="flex justify-between items-center w-full px-12 max-w-screen-2xl mx-auto h-full">
-<div class="text-2xl font-serif text-emerald-900 dark:text-emerald-50 tracking-tight font-headline">Yoga Sanjeevini</div>
+<nav id="main-nav" class="docked full-width w-full top-0 fixed h-[80px] z-50 transition-all duration-500 ease-in-out bg-black/30 backdrop-blur-md">
+<div class="flex justify-between items-center w-full px-4 md:px-6 md:px-12 max-w-screen-2xl mx-auto h-full">
+<div class="text-2xl font-serif text-white tracking-tight font-headline nav-brand">Yoga Sanjeevini</div>
 <div class="hidden md:flex items-center space-x-10">
-<a class="text-emerald-900 dark:text-emerald-100 border-b-2 border-yellow-700/50 pb-1 font-label text-xs uppercase tracking-widest" href="index.html">Home</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium font-label text-xs uppercase tracking-widest hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors duration-300" href="yoga-details.html">Classical Hatha Yoga</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium font-label text-xs uppercase tracking-widest hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors duration-300" href="instructor.html">About Instructor</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium font-label text-xs uppercase tracking-widest hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors duration-300" href="faq.html">Benefits</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium font-label text-xs uppercase tracking-widest hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors duration-300" href="faq.html">FAQ</a>
+<a class="text-white/90 border-b-2 border-white/50 pb-1 font-label text-xs uppercase tracking-widest nav-link" href="index.html">Home</a>
+<a class="text-white/75 font-medium font-label text-xs uppercase tracking-widest hover:text-white transition-colors duration-300 nav-link" href="yoga-details.html">Classical Hatha Yoga</a>
+<a class="text-white/75 font-medium font-label text-xs uppercase tracking-widest hover:text-white transition-colors duration-300 nav-link" href="instructor.html">About Instructor</a>
+<a class="text-white/75 font-medium font-label text-xs uppercase tracking-widest hover:text-white transition-colors duration-300 nav-link" href="faq.html">Benefits</a>
+<a class="text-white/75 font-medium font-label text-xs uppercase tracking-widest hover:text-white transition-colors duration-300 nav-link" href="faq.html">FAQ</a>
 </div>
-<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label text-xs uppercase tracking-widest hover:scale-[0.98] transition-all duration-300 shadow-sm">
+<div class="hidden md:block"><button class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-3 rounded-full font-label text-xs uppercase tracking-widest hover:bg-white hover:text-emerald-900 transition-all duration-300 shadow-sm nav-cta">
                 Start Your Journey
-            </button>
+            </button></div>
 </div>
-</nav>
+<button id="mobile-menu-open" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 transition-all duration-300" aria-label="Open menu">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+            </nav>
 <main>
 <!-- Hero Section with Video Background -->
-<section class="relative min-h-[921px] flex items-center overflow-hidden">
+<section class="relative min-h-[600px] md:min-h-[921px] flex items-center overflow-hidden">
 <!-- Background Video -->
 <div class="absolute inset-0 z-0 video-container bg-stone-900">
 <video autoplay="" loop="" muted="" playsinline="" class="w-full h-full object-cover">
@@ -129,11 +166,11 @@
                     Your browser does not support the video tag.
                 </video>
 <!-- Subtle Dark Overlay for Readability -->
-<div class="absolute inset-0 bg-black/30 md:bg-gradient-to-r md:from-black/60 md:via-black/20 md:to-transparent"></div>
+<div class="absolute inset-0 bg-black/50 md:bg-gradient-to-r md:from-black/60 md:via-black/20 md:to-transparent"></div>
 </div>
-<div class="relative z-10 w-full md:w-3/5 px-8 md:px-24 py-16 flex flex-col justify-center space-y-8">
+<div class="relative z-10 w-full md:w-3/5 px-6 md:px-8 md:px-24 py-16 flex flex-col justify-center space-y-8">
 <div class="space-y-4">
-<h1 class="font-headline text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+<h1 class="font-headline text-4xl md:text-3xl md:text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight">
                         Success Means Nothing Without Health
                     </h1>
 <p class="text-white/90 text-lg md:text-xl max-w-xl leading-relaxed">
@@ -160,7 +197,7 @@
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
 <div class="max-w-2xl space-y-4">
 <span class="font-label text-secondary font-bold uppercase tracking-[0.2em] text-sm">Ancient Wisdom</span>
-<h2 class="font-headline text-4xl md:text-6xl text-on-surface leading-tight">Classical Hatha Yoga</h2>
+<h2 class="font-headline text-4xl md:text-4xl md:text-6xl text-on-surface leading-tight">Classical Hatha Yoga</h2>
 <p class="text-on-surface-variant text-lg leading-relaxed pt-2">
                             Hatha Yoga is about creating a body that is not a hurdle in your life, but a stepping stone toward higher possibilities. We offer yoga in its most authentic form.
                         </p>
@@ -216,7 +253,7 @@
                 <img class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC-CfbpXUcYKpXkrRFAGx8KZCeG8khcF-I4co9TXOJ9kHldKrUE0nOCs3kvRFd4Zz6qjypZCW5RengooffoQ1KEkk3QcxtO_15EVp59RmpQi5LVfssYfX72E_nGrmLZ4uMk5LVI3xFU7sjyEhhEvuQLfbdEzRpPlSziT_iCwfj9W-_2W-9PsyvlppJfwlauYKpKqZNEQHeX1Fu0KzPdSCM_0b2fbMpOeXyWvEtz1kRjGh6tiwoBnL03ylN2AQOPQukYieSuqAcveI" alt="Singing bowl and meditation vibes" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                 <div class="relative z-10 text-center space-y-6 max-w-sm mt-auto mb-8">
-                    <h2 class="font-headline text-4xl md:text-5xl text-[#F9F7F4]">Begin Your Breath</h2>
+                    <h2 class="font-headline text-4xl md:text-3xl md:text-5xl text-[#F9F7F4]">Begin Your Breath</h2>
                     <p class="text-[#E0DBD2] leading-relaxed font-body">Send us a message and our wellness consultant will curate a path specifically for your needs.</p>
                 </div>
             </div>
@@ -259,7 +296,7 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-stone-950 dark:bg-black full-width py-16 px-12 text-stone-100">
+<footer class="bg-stone-950 dark:bg-black full-width py-16 px-6 md:px-12 text-stone-100">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-screen-2xl mx-auto">
 <div class="space-y-6">
 <div class="text-xl font-serif text-white tracking-tight font-headline">Yoga Sanjeevini</div>
@@ -299,26 +336,63 @@
 </div>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const nav = document.querySelector("nav");
+        const nav = document.getElementById("main-nav");
         if (!nav) return;
-        
-        let isActive = false;
-        
-        const activateNav = () => {
-            if (isActive) return;
-            isActive = true;
-            nav.classList.remove("bg-transparent");
-            nav.classList.add("bg-white/70", "dark:bg-emerald-950/70", "backdrop-blur-xl");
+
+        const brand = nav.querySelector(".nav-brand");
+        const links = nav.querySelectorAll(".nav-link");
+        const cta = nav.querySelector(".nav-cta");
+
+        let isScrolled = false;
+
+        const setScrolledState = () => {
+            if (isScrolled) return;
+            isScrolled = true;
+            // Switch to opaque frosted-glass white
+            nav.classList.remove("bg-black/30", "backdrop-blur-md");
+            nav.classList.add("bg-white/80", "backdrop-blur-xl", "shadow-sm", "border-b", "border-stone-100");
+
+            // Update text colors to dark
+            if (brand) { brand.classList.remove("text-white"); brand.classList.add("text-emerald-900"); }
+            links.forEach((link, i) => {
+                link.classList.remove("text-white/90", "text-white/75", "border-white/50", "hover:text-white");
+                if (i === 0) {
+                    link.classList.add("text-emerald-900", "border-yellow-700/50");
+                } else {
+                    link.classList.add("text-stone-600", "hover:text-emerald-700");
+                }
+            });
+            if (cta) {
+                cta.classList.remove("bg-white/20", "border-white/30", "text-white", "hover:text-emerald-900");
+                cta.classList.add("bg-primary", "text-white", "border-transparent");
+            }
         };
 
-        window.addEventListener("mousemove", activateNav, {once: true});
+        const setTopState = () => {
+            if (!isScrolled) return;
+            isScrolled = false;
+            nav.classList.add("bg-black/30", "backdrop-blur-md");
+            nav.classList.remove("bg-white/80", "backdrop-blur-xl", "shadow-sm", "border-b", "border-stone-100");
+
+            if (brand) { brand.classList.add("text-white"); brand.classList.remove("text-emerald-900"); }
+            links.forEach((link, i) => {
+                link.classList.add(i === 0 ? "text-white/90" : "text-white/75", "hover:text-white");
+                link.classList.remove("text-emerald-900", "text-stone-600", "border-yellow-700/50", "hover:text-emerald-700");
+                if (i === 0) link.classList.add("border-white/50");
+            });
+            if (cta) {
+                cta.classList.add("bg-white/20", "border-white/30", "text-white", "hover:text-emerald-900");
+                cta.classList.remove("bg-primary", "border-transparent");
+            }
+        };
+
         window.addEventListener("scroll", () => {
-            if (window.scrollY > 10) activateNav();
+            if (window.scrollY > 60) {
+                setScrolledState();
+            } else {
+                setTopState();
+            }
         });
-        
-        if (window.scrollY > 10) {
-            activateNav();
-        }
     });
 </script>
     <script>
@@ -646,6 +720,60 @@
             });
         });
     });
+</script>
+
+
+<script>
+    (function() {
+        const overlay = document.getElementById('mobile-menu-overlay');
+        const drawer  = document.getElementById('mobile-menu-drawer');
+        const openBtn = document.getElementById('mobile-menu-open');
+        const closeBtn = document.getElementById('mobile-menu-close');
+
+        // Highlight active page link
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (linkPage === currentPage) {
+                link.classList.add('bg-emerald-50', 'text-emerald-900', 'font-bold');
+            }
+        });
+
+        function openMenu() {
+            overlay.classList.remove('opacity-0', 'pointer-events-none');
+            overlay.classList.add('opacity-100');
+            drawer.classList.remove('translate-x-full');
+            drawer.classList.add('translate-x-0');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+            overlay.classList.remove('opacity-100');
+            drawer.classList.add('translate-x-full');
+            drawer.classList.remove('translate-x-0');
+            document.body.style.overflow = '';
+        }
+
+        if (openBtn) openBtn.addEventListener('click', openMenu);
+        if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+        if (overlay) overlay.addEventListener('click', closeMenu);
+
+        // Also hook the mobile CTA button to open registration modal if present
+        const mobileCta = document.querySelector('.mobile-cta-btn');
+        if (mobileCta) {
+            mobileCta.addEventListener('click', () => {
+                closeMenu();
+                const modal = document.getElementById('registration-modal');
+                const content = document.getElementById('modal-content');
+                if (modal && content) {
+                    modal.classList.remove('opacity-0', 'pointer-events-none');
+                    content.classList.remove('scale-95');
+                    content.classList.add('scale-100');
+                }
+            });
+        }
+    })();
 </script>
 
 </body></html>
