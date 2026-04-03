@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#fbf9f8",
+                        "surface-container-highest": "#e4e2e2",
+                        "secondary-container": "#fecb97",
+                        "on-tertiary-fixed": "#3a0b00",
+                        "on-primary-fixed": "#002118",
+                        "on-tertiary-fixed-variant": "#723522",
+                        "primary-container": "#2c5f4f",
+                        "surface-bright": "#fbf9f8",
+                        "surface-container-high": "#e9e8e7",
+                        "on-tertiary-container": "#ffbca8",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#854430",
+                        "tertiary-fixed": "#ffdbd0",
+                        "primary-fixed": "#b8eed9",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb59e",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#682e1b",
+                        "surface": "#fbf9f8",
+                        "inverse-primary": "#9cd2bd",
+                        "on-primary-fixed-variant": "#1b4f40",
+                        "surface-variant": "#e4e2e2",
+                        "surface-dim": "#dbdad9",
+                        "outline": "#707975",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#efbd8a",
+                        "on-secondary-fixed-variant": "#614018",
+                        "on-primary-container": "#a1d7c2",
+                        "secondary-fixed": "#ffdcbc",
+                        "outline-variant": "#c0c9c3",
+                        "on-surface": "#1b1c1c",
+                        "primary-fixed-dim": "#9cd2bd",
+                        "secondary": "#7c572d",
+                        "inverse-on-surface": "#f2f0f0",
+                        "on-background": "#1b1c1c",
+                        "on-secondary-container": "#79542a",
+                        "surface-container": "#efeded",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f5f3f3",
+                        "on-secondary-fixed": "#2c1700",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#356857",
+                        "error": "#ba1a1a",
+                        "primary": "#104738",
+                        "on-surface-variant": "#404945",
+                        "inverse-surface": "#303031"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .hero-gradient {
+            background: linear-gradient(145deg, #FAF8F5 0%, #FFE8DC 100%);
+        }
+        .editorial-mask {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+        .whatsapp-glow {
+            box-shadow: 0 0 15px rgba(44, 95, 79, 0.4), 0 0 5px rgba(239, 189, 138, 0.3);
+            border: 1px solid rgba(239, 189, 138, 0.4);
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Bar -->
+<nav class="docked full-width top-0 sticky h-[80px] z-50 bg-white/70 dark:bg-emerald-950/70 backdrop-blur-xl transition-all duration-700 cubic-bezier(0.2,0,0,1)">
+<div class="flex justify-between items-center w-full px-12 max-w-screen-2xl mx-auto h-full">
+<div class="text-2xl font-serif text-emerald-900 dark:text-emerald-50 tracking-tight font-headline">Yoga Sanjeevini</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-emerald-900 dark:text-emerald-100 border-b-2 border-yellow-700/50 pb-1 font-label text-xs uppercase tracking-widest" href="#">Home</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium font-label text-xs uppercase tracking-widest hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors duration-300" href="#">Classical Hatha Yoga</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium font-label text-xs uppercase tracking-widest hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors duration-300" href="#">About Instructor</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium font-label text-xs uppercase tracking-widest hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors duration-300" href="#">Benefits</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium font-label text-xs uppercase tracking-widest hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors duration-300" href="#">FAQ</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label text-xs uppercase tracking-widest hover:scale-[0.98] transition-all duration-300 shadow-sm">
+                Start Your Journey
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section with Video Background -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden">
+<!-- Background Video -->
+<div class="absolute inset-0 z-0 video-container">
+<video autoplay="" loop="" muted="" playsinline="" poster="https://lh3.googleusercontent.com/aida-public/AB6AXuCu48lUt8K9nkCk43X7G0bL_NtQ2hQp_EWFM7ln47Xx5sOtUFQS5WkyqB_jxnmkB9ZKdjhfrBI_S-3yMWDVI3flve2iuUZULTInXzBARUTkdI5xxv_nxTI6BgTFQlbVCQlIhdAuujSkln6cgrl54t56YErY3jYJONdd4fRGyuMeJ5YH3IMC94DJpvwQY7M0jEKfyEtim79s_FCrR4TmOCXuKduzkFysFiz-n0E-x5Z-N4CFsnjn-YproA9dTY4vzy-PZUByH5i7lyM">
+<source src="https://assets.mixkit.co/videos/preview/mixkit-woman-doing-yoga-on-a-wooden-floor-41669-large.mp4" type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+<!-- Subtle Dark Overlay for Readability -->
+<div class="absolute inset-0 bg-black/30 md:bg-gradient-to-r md:from-black/60 md:via-black/20 md:to-transparent"></div>
+</div>
+<div class="relative z-10 w-full md:w-3/5 px-8 md:px-24 py-16 flex flex-col justify-center space-y-8">
+<div class="space-y-4">
+<h1 class="font-headline text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+                        Success Means Nothing Without Health
+                    </h1>
+<p class="text-white/90 text-lg md:text-xl max-w-xl leading-relaxed">
+                        You may achieve everything you call success — money, car, home — but without good health, can you truly enjoy it?
+                    </p>
+</div>
+<div class="pl-6 border-l-4 border-secondary italic font-headline text-2xl text-white/80 py-2">
+                    "Yoga is a technology that upgrades your internal system, allowing you to live a life of depth and balance."
+                </div>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-xl font-medium hover:scale-[0.98] transition-all duration-300 group shadow-lg">
+<span>Get Started</span>
+<span class="material-symbols-outlined text-lg" data-icon="chat">chat</span>
+</button>
+<button class="border-2 border-white text-white px-8 py-4 rounded-xl font-medium hover:bg-white/10 transition-all duration-300">
+                        Know More
+                    </button>
+</div>
+</div>
+</section>
+<!-- Ancient Wisdom Section -->
+<section class="py-24 px-8 md:px-24 bg-surface">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl space-y-4">
+<span class="font-label text-secondary font-bold uppercase tracking-[0.2em] text-sm">Ancient Wisdom</span>
+<h2 class="font-headline text-4xl md:text-6xl text-on-surface leading-tight">Classical Hatha Yoga</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed pt-2">
+                            Hatha Yoga is about creating a body that is not a hurdle in your life, but a stepping stone toward higher possibilities. We offer yoga in its most authentic form.
+                        </p>
+</div>
+<div class="hidden md:block pb-2">
+<a class="font-headline italic text-secondary text-xl border-b-2 border-secondary pb-1 hover:text-tertiary transition-colors" href="#">View All Programs</a>
+</div>
+</div>
+<!-- Category Cards - Bento Style -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_20px_40px_rgba(43,43,43,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+<div class="h-96 overflow-hidden">
+<img alt="Classical Yoga Practice" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Close up of serene hand mudra during yoga practice with soft morning light and atmospheric dust particles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd9SVx12bDV1BaiRULZh-QsYmEiE1lgWZceMP-8WiXkLEl5tXIER53giVOLUH29Hno--Tz8rZjGjsKin2n1YcEWbi7nVXG3VcsoSFySQzviV2lVXMb6twE2zU9dE0CSA8FcFqUNLMt3oj5uEIGnFhnABrOeg1GnJXp8C41S7puDmkVKK8nwEBFMjMWsU5LzBLLFzpqeBCUMLWxizoznRPIKMBe93FM6Sha8ETc2cxUC9tvt3K1xTxvcnb3rxA2HSIXxBop-NZUim4"/>
+</div>
+<div class="p-10 space-y-4">
+<h3 class="font-headline text-3xl text-on-surface">Classical &amp; Authentic</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                                Experience yoga as it was meant to be shared. No filters, no modifications, just pure transmission of ancient sciences.
+                            </p>
+<div class="pt-4 flex items-center text-primary font-medium gap-2">
+<span>Learn the practice</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_20px_40px_rgba(43,43,43,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+<div class="h-96 overflow-hidden">
+<img alt="Yoga Science" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Interior of a minimalist wooden yoga studio with sunlight streaming through large windows hitting a single mat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDpzWK5VtOLcWGtMvtgrVyXz9XmKsHH7keOau1h2MiOlrMJncuxpOVmuQIRuV3nTqEf4PXzX-GeoWeYzH_yGF3XOoeek_3imT44_HfIgWyxt9KDwF72-mVNl1oCicksgGX6yGTXhHJ3Gjz-GAx3OPeqk7i7Qd1lrhGm0Eaekwr5gnMVv0RzVuv1yBUVb5FcsE7nH0nFrvasokc_gdhGtrH3k2sHvUmnx5FP2E1jUP84LK-xfYd9WFtq93lyKfO-xlXYlZYePgP3vw"/>
+</div>
+<div class="p-10 space-y-4">
+<h3 class="font-headline text-3xl text-on-surface">An Inner Science</h3>
+<p class="text-on-surface-variant leading-relaxed">
+                                A profound technology that prepares the body for higher dimensions of energy and awareness. It is a journey within.
+                            </p>
+<div class="pt-4 flex items-center text-primary font-medium gap-2">
+<span>Explore the science</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- New "What are you looking for?" Section -->
+<section class="py-24 px-8 md:px-24 bg-surface-container-lowest" id="selection-section">
+<div class="max-w-screen-2xl mx-auto text-center"><input id="user-interest-selection" name="interest" type="hidden" value=""/>
+<h2 class="font-headline text-4xl md:text-5xl text-on-surface mb-16">What are you looking for?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Physical Vitality -->
+<div class="selection-card cursor-pointer bg-[#F4F9F6] p-10 rounded-2xl flex flex-col items-center text-center space-y-6 hover:shadow-lg transition-all duration-300 border-4 border-transparent" data-option="physical" onclick="selectOption(this, 'Physical Vitality')">
+<div class="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-emerald-800 text-3xl">fitness_center</span>
+</div>
+<h3 class="font-headline text-2xl text-on-surface pointer-events-none">Physical Vitality</h3>
+<p class="text-on-surface-variant leading-relaxed pointer-events-none">Strengthen your body, improve flexibility, and build a resilient foundation for long-term health and energy.</p>
+<div class="selected-check hidden"><span class="material-symbols-outlined text-primary">check_circle</span></div>
+</div>
+<!-- Mental Clarity -->
+<div class="selection-card cursor-pointer bg-[#FDF9F2] p-10 rounded-2xl flex flex-col items-center text-center space-y-6 hover:shadow-lg transition-all duration-300 border-4 border-transparent" data-option="mental" onclick="selectOption(this, 'Mental Clarity')">
+<div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-amber-800 text-3xl">psychology</span>
+</div>
+<h3 class="font-headline text-2xl text-on-surface pointer-events-none">Mental Clarity</h3>
+<p class="text-on-surface-variant leading-relaxed pointer-events-none">Cultivate a sharp, focused mind and emotional balance through practices designed to quiet internal noise.</p>
+<div class="selected-check hidden"><span class="material-symbols-outlined text-primary">check_circle</span></div>
+</div>
+<!-- Spiritual Growth -->
+<div class="selection-card cursor-pointer bg-[#F8F4F1] p-10 rounded-2xl flex flex-col items-center text-center space-y-6 hover:shadow-lg transition-all duration-300 border-4 border-transparent" data-option="spiritual" onclick="selectOption(this, 'Spiritual Growth')">
+<div class="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-rose-800 text-3xl">self_improvement</span>
+</div>
+<h3 class="font-headline text-2xl text-on-surface pointer-events-none">Spiritual Growth</h3>
+<p class="text-on-surface-variant leading-relaxed pointer-events-none">Explore the deeper dimensions of human existence and align yourself with the natural rhythms of life.</p>
+<div class="selected-check hidden"><span class="material-symbols-outlined text-primary">check_circle</span></div>
+</div>
+</div>
+<div class="mt-16 flex justify-center">
+<button class="bg-primary text-on-primary px-12 py-4 rounded-full font-label text-xs uppercase tracking-widest opacity-50 cursor-not-allowed transition-all duration-300" disabled="" id="continue-to-form" onclick="document.getElementById('contact-form-section').scrollIntoView({behavior: 'smooth'})">
+Continue to Registration
+</button>
+</div></div>
+</section>
+<!-- Join Today Section (Interest Inquiry) -->
+<section class="bg-surface-container-low py-24 px-8 md:px-24" id="contact-form-section">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row gap-16 items-start">
+<!-- Contact Form -->
+<div class="w-full md:w-1/2 bg-white p-10 md:p-16 rounded-lg shadow-sm">
+<h2 class="font-headline text-4xl mb-8">Begin Your Transformation</h2>
+<form action="#" class="space-y-6">
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Your Primary Focus</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm px-4 py-3 focus:ring-2 focus:ring-primary/20 italic" id="form-interest-display" name="selected_interest" placeholder="Please select from above..." readonly="" type="text"/>
+</div><div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm px-4 py-3 focus:ring-2 focus:ring-primary/20" placeholder="Enter your name" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Your Primary Focus</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm px-4 py-3 focus:ring-2 focus:ring-primary/20 italic" id="form-interest-display" name="selected_interest" placeholder="Please select from above..." readonly="" type="text"/>
+</div><div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm px-4 py-3 focus:ring-2 focus:ring-primary/20" placeholder="example@mail.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Phone Number</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm px-4 py-3 focus:ring-2 focus:ring-primary/20" placeholder="+91 00000 00000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Residential Address</label>
+<textarea class="w-full bg-surface-container-high border-none rounded-sm px-4 py-3 focus:ring-2 focus:ring-primary/20" placeholder="Where are you located?" rows="3"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:scale-[0.99] transition-transform" type="submit">
+<span>Submit via WhatsApp</span>
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</form>
+</div>
+<!-- Contact Info & Map -->
+<div class="w-full md:w-1/2 space-y-12">
+<div class="space-y-8">
+<div class="space-y-2">
+<h3 class="font-headline text-2xl">Visit Our Sanctuary</h3>
+<p class="text-on-surface-variant">Connect with us for personalized guidance and session timings.</p>
+</div>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h4 class="font-label text-xs uppercase tracking-widest font-bold">Main Studio</h4>
+<p class="text-on-surface-variant">108 Wellness Lane, Nirvana Circle, Bangalore, KA 560001</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="mail">mail</span>
+</div>
+<div>
+<h4 class="font-label text-xs uppercase tracking-widest font-bold">Email Us</h4>
+<p class="text-on-surface-variant">hello@yogasanjeevini.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="call">call</span>
+</div>
+<div>
+<h4 class="font-label text-xs uppercase tracking-widest font-bold">WhatsApp</h4>
+<p class="text-on-surface-variant">+91 98765 43210</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="rounded-lg overflow-hidden h-72 shadow-inner border border-outline-variant/20 relative">
+<img alt="Map location" class="w-full h-full object-cover grayscale opacity-60" data-alt="Minimalist artistic map of a city neighborhood in muted earth tones and green markers" data-location="Bangalore" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzoL1MsnHDXxNVqA_s6ruBsQ4uWXa2TQRDsdgnx2k2nPAqCOQXzX-a5Ieso6nXoaGtDbn-os9k_PHVXcstA1zQBdEPHnItT6F3bXo0ic383WUulv3dLgxejyHR794b8wMO2r9BpfgKN6rzFA1_vFHKz7t9e4ipyozfZYMrVUAvR9ycfkJF3PCM9thieKaL11zv3--1CMlYHs-CghI1dNNASGCdAMTRlcgNoVhB8cRLLSrMMFKsp_WlDLfHtRP4IUYnMDlzGu25Oj8"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-primary text-on-primary px-6 py-2 rounded-full flex items-center gap-2 shadow-lg">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-sm font-bold">Open in Google Maps</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-950 dark:bg-black full-width py-16 px-12 text-stone-100">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-screen-2xl mx-auto">
+<div class="space-y-6">
+<div class="text-xl font-serif text-white tracking-tight font-headline">Yoga Sanjeevini</div>
+<p class="text-stone-400 max-w-xs leading-relaxed font-body">
+                    Restoring the authentic wisdom of Hatha Yoga to help individuals live a life of fulfillment and health.
+                </p>
+</div>
+<div class="space-y-6">
+<h4 class="font-label text-xs uppercase tracking-widest font-bold text-yellow-600">Explore</h4>
+<ul class="space-y-4 text-stone-400">
+<li><a class="hover:text-white transition-colors" href="#">Classical Hatha Yoga</a></li>
+<li><a class="hover:text-white transition-colors" href="#">About Instructor</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Student Testimonials</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Program FAQ</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label text-xs uppercase tracking-widest font-bold text-yellow-600">Legal</h4>
+<ul class="space-y-4 text-stone-400">
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+<div class="pt-4">
+<p class="text-stone-500 text-xs">© 2024 Yoga Sanjeevini. All rights reserved.</p>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating WhatsApp Action Button -->
+<div class="fixed bottom-8 right-8 z-[110]">
+<a class="w-16 h-16 rounded-full bg-[#2C5F4F] text-white whatsapp-glow flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-2xl" href="https://wa.me/917975307028" target="_blank">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793 0-.853.448-1.273.607-1.446.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.088.275.073.376-.044.101-.117.433-.506.549-.68.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.435 5.179l-1.41 5.153 5.29-1.392C8.75 21.647 10.312 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.477 0-2.852-.362-4.057-1l-.29-.166-3.007.792.805-2.943-.182-.29c-.702-1.115-1.109-2.433-1.109-3.843 0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"></path>
+</svg>
+</a>
+</div>
+<script>
+function selectOption(element, value) {
+    // Remove selected state from all cards
+    document.querySelectorAll('.selection-card').forEach(card => {
+        card.classList.remove('border-primary', 'shadow-xl', 'scale-[1.02]');
+        card.classList.add('border-transparent');
+        card.querySelector('.selected-check').classList.add('hidden');
+    });
+
+    // Add selected state to clicked card
+    element.classList.remove('border-transparent');
+    element.classList.add('border-primary', 'shadow-xl', 'scale-[1.02]');
+    element.querySelector('.selected-check').classList.remove('hidden');
+
+    // Update hidden field and form display
+    document.getElementById('user-interest-selection').value = value;
+    document.getElementById('form-interest-display').value = value;
+
+    // Enable continue button
+    const btn = document.getElementById('continue-to-form');
+    btn.disabled = false;
+    btn.classList.remove('opacity-50', 'cursor-not-allowed');
+    btn.classList.add('hover:scale-105', 'shadow-lg');
+}
+</script></body></html>

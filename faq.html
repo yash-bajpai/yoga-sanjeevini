@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Benefits &amp; FAQ | Yoga Sanjeevini</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#fbf9f8",
+                        "surface-container-highest": "#e4e2e2",
+                        "secondary-container": "#fecb97",
+                        "on-tertiary-fixed": "#3a0b00",
+                        "on-primary-fixed": "#002118",
+                        "on-tertiary-fixed-variant": "#723522",
+                        "primary-container": "#2c5f4f",
+                        "surface-bright": "#fbf9f8",
+                        "surface-container-high": "#e9e8e7",
+                        "on-tertiary-container": "#ffbca8",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#854430",
+                        "tertiary-fixed": "#ffdbd0",
+                        "primary-fixed": "#b8eed9",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb59e",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#682e1b",
+                        "surface": "#fbf9f8",
+                        "inverse-primary": "#9cd2bd",
+                        "on-primary-fixed-variant": "#1b4f40",
+                        "surface-variant": "#e4e2e2",
+                        "surface-dim": "#dbdad9",
+                        "outline": "#707975",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#efbd8a",
+                        "on-secondary-fixed-variant": "#614018",
+                        "on-primary-container": "#a1d7c2",
+                        "secondary-fixed": "#ffdcbc",
+                        "outline-variant": "#c0c9c3",
+                        "on-surface": "#1b1c1c",
+                        "primary-fixed-dim": "#9cd2bd",
+                        "secondary": "#7c572d",
+                        "inverse-on-surface": "#f2f0f0",
+                        "on-background": "#1b1c1c",
+                        "on-secondary-container": "#79542a",
+                        "surface-container": "#efeded",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f5f3f3",
+                        "on-secondary-fixed": "#2c1700",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#356857",
+                        "error": "#ba1a1a",
+                        "primary": "#104738",
+                        "on-surface-variant": "#404945",
+                        "inverse-surface": "#303031"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader"],
+                        "body": ["Inter"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .benefit-card-lift {
+            transition: transform 0.7s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .benefit-card-lift:hover {
+            transform: translateY(-12px);
+        }
+        .faq-accordion-header[aria-expanded="true"] .icon-plus { display: none; }
+        .faq-accordion-header[aria-expanded="false"] .icon-minus { display: none; }
+    
+        .whatsapp-glow {
+            box-shadow: 0 0 15px rgba(44, 95, 79, 0.4), 0 0 5px rgba(239, 189, 138, 0.3);
+            border: 1px solid rgba(239, 189, 138, 0.4);
+        }
+    
+        /* Smooth Page Transitions */
+        body { animation: fadeIn 0.8s ease-out; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .page-transition-out { animation: fadeOut 0.4s ease-out forwards !important; }
+
+        @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface overflow-x-hidden">
+<!-- TopNavBar Shell -->
+<nav class="   docked full-width top-0 sticky h-[80px] z-50 flex items-center bg-transparent">
+<div class="flex justify-between items-center w-full px-12 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif text-emerald-900 dark:text-emerald-50">Yoga Sanjeevini</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors duration-300 Manrope uppercase tracking-widest text-xs" href="index.html">Home</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors duration-300 Manrope uppercase tracking-widest text-xs" href="yoga-details.html">Classical Hatha Yoga</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors duration-300 Manrope uppercase tracking-widest text-xs" href="instructor.html">About Instructor</a>
+<a class="text-emerald-900 dark:text-emerald-100 border-b-2 border-yellow-700/50 pb-1 Manrope uppercase tracking-widest text-xs" href="faq.html">Benefits</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors duration-300 Manrope uppercase tracking-widest text-xs" href="faq.html">FAQ</a>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-xl font-medium hover:opacity-90 active:scale-[0.98] transition-all duration-700 cubic-bezier(0.2,0,0,1)">
+                Start Your Journey
+            </button>
+</div>
+</nav>
+<!-- Hero / Intro for Page -->
+<header class="py-24 px-12 max-w-screen-2xl mx-auto text-center">
+<span class="font-label uppercase tracking-[0.2em] text-secondary text-sm mb-6 block">Holistic Wellness</span>
+<h1 class="font-headline text-6xl md:text-8xl text-primary leading-tight max-w-4xl mx-auto">Cultivate Vitality &amp; Inner Clarity</h1>
+</header>
+<!-- Benefits Section -->
+<section class="relative bg-gradient-to-br from-[#FAF8F5] to-[#FFE8DC] py-32 px-12 overflow-hidden">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<h2 class="font-headline text-5xl md:text-6xl text-primary max-w-xl">Benefits of Practice</h2>
+<p class="text-on-surface-variant max-w-md font-body text-lg leading-relaxed">
+                    Our classical Hatha Yoga practices are designed to re-establish the system's natural alignment and unlock deeper dimensions of your existence.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+<!-- Benefit Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg p-10 benefit-card-lift">
+<div class="w-20 h-20 rounded-full bg-gradient-to-tr from-primary to-primary-container flex items-center justify-center mb-8 mx-auto">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="fitness_center">fitness_center</span>
+</div>
+<h3 class="font-headline text-2xl text-center text-on-surface mb-4">Physical Strength &amp; Flexibility</h3>
+<p class="text-on-surface-variant text-center font-body leading-relaxed">Systematically strengthens muscles and ligaments while increasing the range of motion in the joints.</p>
+</div>
+<!-- Benefit Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg p-10 benefit-card-lift">
+<div class="w-20 h-20 rounded-full bg-gradient-to-tr from-secondary to-secondary-container flex items-center justify-center mb-8 mx-auto">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="psychology">psychology</span>
+</div>
+<h3 class="font-headline text-2xl text-center text-on-surface mb-4">Calm &amp; Focused Mind</h3>
+<p class="text-on-surface-variant text-center font-body leading-relaxed">Stabilizes the mind and sharpens cognitive focus, reducing the mental clutter of modern life.</p>
+</div>
+<!-- Benefit Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg p-10 benefit-card-lift">
+<div class="w-20 h-20 rounded-full bg-gradient-to-tr from-tertiary to-tertiary-container flex items-center justify-center mb-8 mx-auto">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="favorite">favorite</span>
+</div>
+<h3 class="font-headline text-2xl text-center text-on-surface mb-4">Emotional Balance</h3>
+<p class="text-on-surface-variant text-center font-body leading-relaxed">Regulates the endocrine system to foster a steady sense of joy and inner equilibrium.</p>
+</div>
+<!-- Benefit Card 4 -->
+<div class="bg-surface-container-lowest rounded-lg p-10 benefit-card-lift">
+<div class="w-20 h-20 rounded-full bg-gradient-to-tr from-primary to-primary-container flex items-center justify-center mb-8 mx-auto">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="spa">spa</span>
+</div>
+<h3 class="font-headline text-2xl text-center text-on-surface mb-4">Stress Relief</h3>
+<p class="text-on-surface-variant text-center font-body leading-relaxed">Activates the parasympathetic nervous system to effectively dissolve deep-rooted stress.</p>
+</div>
+<!-- Benefit Card 5 -->
+<div class="bg-surface-container-lowest rounded-lg p-10 benefit-card-lift">
+<div class="w-20 h-20 rounded-full bg-gradient-to-tr from-secondary to-secondary-container flex items-center justify-center mb-8 mx-auto">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="self_improvement">self_improvement</span>
+</div>
+<h3 class="font-headline text-2xl text-center text-on-surface mb-4">Holistic Wellbeing</h3>
+<p class="text-on-surface-variant text-center font-body leading-relaxed">A comprehensive approach that nurtures the physical, mental, and spiritual self.</p>
+</div>
+<!-- Decorative Image Card -->
+<div class="relative overflow-hidden rounded-lg group">
+<img alt="Yoga practitioner" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Peaceful yoga practitioner in a serene outdoor setting at sunrise with soft golden light filtering through trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCzwhtJPZOcjEDxE4GM4uOAJslCzVRNDY2DTDSvQSYxRUhM7N5_1KrGzFw1wcZgaK9xIxEPXEun4z8NMMGYqAQ2pkaWFE1sCaXCW6w4DZMSoNit1LsrKslbaBVXjh6e3F2Ns8F5dkVoIwuYNfnJ9apXj4WB84lRHHkPGR8rqs2rrnWjeb6dJqR2CLN2OCZdsR3iW_vmmL42hLRa-dvG_rtE_WIaIbr4wmA6qeTElQTNidzTCuLsTTKKgo7_Tm1cjefzKwxPVNXGD8"/>
+<div class="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors"></div>
+<div class="relative z-10 p-10 flex flex-col justify-end h-full">
+<p class="text-white font-headline text-xl italic">"Yoga is not just an exercise; it is a way of living."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-32 px-12 bg-surface">
+<div class="max-w-[900px] mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline text-5xl text-primary mb-6">Frequently Asked Questions</h2>
+<div class="h-1 w-24 bg-secondary mx-auto rounded-full"></div>
+</div>
+<div class="space-y-6">
+<!-- FAQ Item 1 -->
+<div class="group border-none overflow-hidden rounded-lg transition-all duration-500">
+<button aria-expanded="false" class="faq-accordion-header w-full flex items-center justify-between p-8 text-left bg-[#FAF8F5] transition-colors hover:bg-surface-container-high">
+<span class="font-headline text-xl text-primary">Who can practice?</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary">
+<span class="material-symbols-outlined icon-plus">add</span>
+</div>
+</button>
+<div class="faq-content max-h-0 bg-surface-container-lowest overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.2,0,0,1)] border-l-4 border-secondary/0">
+<div class="p-8 pt-0 text-on-surface-variant leading-relaxed font-body">
+                            Classical Hatha Yoga is designed for everyone. Regardless of age, physical condition, or lifestyle, these practices can be adapted to suit your unique needs and capacities.
+                        </div>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="group border-none overflow-hidden rounded-lg transition-all duration-500">
+<button aria-expanded="false" class="faq-accordion-header w-full flex items-center justify-between p-8 text-left bg-[#FAF8F5] transition-colors hover:bg-surface-container-high">
+<span class="font-headline text-xl text-primary">Is prior experience required?</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary">
+<span class="material-symbols-outlined icon-plus">add</span>
+</div>
+</button>
+<div class="faq-content max-h-0 bg-surface-container-lowest overflow-hidden transition-all duration-700 border-l-4 border-secondary/0">
+<div class="p-8 pt-0 text-on-surface-variant leading-relaxed font-body">
+                            No prior experience is necessary. Our introductory programs are specifically crafted for beginners to build a solid foundation from the ground up, ensuring safe and effective practice.
+                        </div>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="group border-none overflow-hidden rounded-lg transition-all duration-500">
+<button aria-expanded="false" class="faq-accordion-header w-full flex items-center justify-between p-8 text-left bg-[#FAF8F5] transition-colors hover:bg-surface-container-high">
+<span class="font-headline text-xl text-primary">How soon can I feel the benefits?</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary">
+<span class="material-symbols-outlined icon-plus">add</span>
+</div>
+</button>
+<div class="faq-content max-h-0 bg-surface-container-lowest overflow-hidden transition-all duration-700 border-l-4 border-secondary/0">
+<div class="p-8 pt-0 text-on-surface-variant leading-relaxed font-body">
+                            Many practitioners report a sense of lightness and clarity after the very first session. Consistent practice over 2-3 weeks usually yields noticeable improvements in physical flexibility and mental calmness.
+                        </div>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="group border-none overflow-hidden rounded-lg transition-all duration-500">
+<button aria-expanded="false" class="faq-accordion-header w-full flex items-center justify-between p-8 text-left bg-[#FAF8F5] transition-colors hover:bg-surface-container-high">
+<span class="font-headline text-xl text-primary">Is it suitable for working professionals?</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary">
+<span class="material-symbols-outlined icon-plus">add</span>
+</div>
+</button>
+<div class="faq-content max-h-0 bg-surface-container-lowest overflow-hidden transition-all duration-700 border-l-4 border-secondary/0">
+<div class="p-8 pt-0 text-on-surface-variant leading-relaxed font-body">
+                            Absolutely. The practices are particularly beneficial for those with demanding careers, as they help manage stress, improve posture affected by desk work, and increase sustained energy levels throughout the day.
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-32 px-12 bg-surface-container-high">
+<div class="max-w-screen-xl mx-auto bg-primary rounded-lg p-16 md:p-24 relative overflow-hidden flex flex-col md:flex-row items-center gap-12">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary-container rounded-full blur-[100px] opacity-30 -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10 flex-1">
+<h2 class="font-headline text-5xl md:text-6xl text-white leading-tight mb-8">Take the first step toward transforming your life</h2>
+<p class="text-on-primary-container text-xl max-w-lg font-body">Begin your journey with Yoga Sanjeevini today and experience the ancient wisdom of Hatha Yoga in its purest form.</p>
+</div>
+<div class="relative z-10">
+<button class="bg-white text-primary px-12 py-5 rounded-full text-xl font-bold hover:bg-secondary-fixed transition-all duration-500 shadow-xl">
+                    Join Today
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer Shell -->
+<footer class="bg-stone-950 text-stone-100 py-24 px-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 w-full max-w-screen-2xl mx-auto">
+<div class="space-y-8">
+<div class="text-xl font-serif text-white">Yoga Sanjeevini</div>
+<p class="text-stone-400 font-body leading-relaxed max-w-xs">Restoring balance through the ancient science of classical Hatha Yoga.</p>
+<div class="flex space-x-6">
+<a class="text-stone-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-stone-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div class="space-y-8">
+<h4 class="font-label uppercase tracking-widest text-xs text-secondary">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-400 hover:text-white transition-colors font-body" href="#">Privacy Policy</a></li>
+<li><a class="text-stone-400 hover:text-white transition-colors font-body" href="#">Terms of Service</a></li>
+<li><a class="text-stone-400 hover:text-white transition-colors font-body" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<div class="space-y-8">
+<h4 class="font-label uppercase tracking-widest text-xs text-secondary">Contact</h4>
+<p class="text-stone-400 font-body">hello@yogasanjeevini.com</p>
+<p class="text-stone-400 font-body">+1 (555) 234-5678</p>
+<p class="text-stone-400 font-body text-sm mt-12">© 2024 Yoga Sanjeevini. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- Scripts for Accordion Interaction (Handled via CSS-like toggle logic in production, but simplified for preview) -->
+<script>
+        document.querySelectorAll('.faq-accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const expanded = button.getAttribute('aria-expanded') === 'true';
+                const parent = button.parentElement;
+                const content = parent.querySelector('.faq-content');
+                const icon = button.querySelector('.material-symbols-outlined');
+
+                // Toggle logic
+                button.setAttribute('aria-expanded', !expanded);
+                
+                if (!expanded) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.classList.add('border-secondary/100');
+                    icon.innerText = 'remove';
+                } else {
+                    content.style.maxHeight = '0';
+                    content.classList.remove('border-secondary/100');
+                    icon.innerText = 'add';
+                }
+            });
+        });
+    </script>
+
+<!-- Floating WhatsApp Action Button -->
+<div class="fixed bottom-8 right-8 z-[110]">
+    <a class="w-16 h-16 rounded-full bg-[#2C5F4F] text-white whatsapp-glow flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-2xl" href="https://wa.me/917975307028" target="_blank">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793 0-.853.448-1.273.607-1.446.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.088.275.073.376-.044.101-.117.433-.506.549-.68.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.435 5.179l-1.41 5.153 5.29-1.392C8.75 21.647 10.312 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.477 0-2.852-.362-4.057-1l-.29-.166-3.007.792.805-2.943-.182-.29c-.702-1.115-1.109-2.433-1.109-3.843 0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"></path>
+        </svg>
+    </a>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const nav = document.querySelector("nav");
+        if (!nav) return;
+        
+        let isActive = false;
+        
+        const activateNav = () => {
+            if (isActive) return;
+            isActive = true;
+            nav.classList.remove("bg-transparent");
+            nav.classList.add("bg-white/70", "dark:bg-emerald-950/70", "backdrop-blur-xl");
+        };
+
+        window.addEventListener("mousemove", activateNav, {once: true});
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 10) activateNav();
+        });
+        
+        if (window.scrollY > 10) {
+            activateNav();
+        }
+    });
+</script>
+
+<!-- Global Registration Modal -->
+<div id="registration-modal" class="fixed inset-0 z-[200] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div id="modal-backdrop" class="absolute inset-0 bg-stone-900/60 backdrop-blur-md cursor-pointer"></div>
+    <div id="modal-content" class="bg-surface-container-lowest w-full max-w-xl rounded-3xl overflow-hidden shadow-2xl relative z-10 scale-95 transition-transform duration-500 cubic-bezier(0.2,0,0,1)">
+        <button id="close-modal" class="absolute top-6 right-6 w-10 h-10 bg-stone-100 rounded-full flex items-center justify-center text-stone-500 hover:text-stone-800 hover:bg-stone-200 transition-colors z-20">
+            <span class="material-symbols-outlined text-xl">close</span>
+        </button>
+        
+        <div class="px-10 pt-10 pb-6 bg-[#352F26] text-center relative overflow-hidden">
+            <h3 class="relative z-10 font-headline text-3xl md:text-4xl text-[#F9F7F4] mb-2">Begin Your Journey</h3>
+            <p class="relative z-10 text-[#E0DBD2] text-sm">Please fill out the form below to register.</p>
+        </div>
+        
+        <form id="global-registration-form" class="p-10 space-y-5 bg-white">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div class="space-y-1">
+                    <label class="font-label text-xs uppercase tracking-widest text-stone-500 font-bold ml-1">Full Name</label>
+                    <input type="text" id="reg-name" placeholder="E.g. Aditi Sharma" class="w-full bg-[#f3efe9] text-stone-700 placeholder-stone-400 border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-[#5c6e61] text-sm font-medium" />
+                </div>
+                <div class="space-y-1">
+                    <label class="font-label text-xs uppercase tracking-widest text-stone-500 font-bold ml-1">Email Address</label>
+                    <input type="email" id="reg-email" placeholder="example@mail.com" class="w-full bg-[#f3efe9] text-stone-700 placeholder-stone-400 border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-[#5c6e61] text-sm font-medium" />
+                </div>
+            </div>
+            
+            <div class="space-y-1">
+                <label class="font-label text-xs uppercase tracking-widest text-stone-500 font-bold ml-1">Phone Number</label>
+                <input type="tel" id="reg-phone" placeholder="+91 XXXXX XXXXX" class="w-full bg-[#f3efe9] text-stone-700 placeholder-stone-400 border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-[#5c6e61] text-sm font-medium" />
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <!-- Interest Dropdown -->
+                <div class="space-y-1">
+                    <label class="font-label text-xs uppercase tracking-widest text-stone-500 font-bold ml-1">Primary Interest</label>
+                    <div class="relative custom-select" id="reg-dropdown-interest">
+                        <button type="button" class="w-full bg-[#f3efe9] text-stone-700 border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-[#5c6e61] text-sm font-medium flex justify-between items-center cursor-pointer" id="reg-toggle-interest">
+                            <span id="reg-text-interest" class="text-stone-400">Select Area</span>
+                            <span class="material-symbols-outlined text-lg transition-transform duration-300" id="reg-icon-interest">expand_more</span>
+                        </button>
+                        <div class="absolute z-50 w-full mt-2 bg-white rounded-xl shadow-2xl overflow-hidden hidden border border-stone-100 transition-all duration-200 opacity-0 scale-95 origin-top" id="reg-menu-interest">
+                            <div class="py-1 max-h-48 overflow-y-auto">
+                                <div class="px-4 py-3 hover:bg-[#f3efe9] cursor-pointer text-sm font-medium text-stone-700 transition-colors dropdown-item-int" data-value="Physical Vitality">Physical Vitality</div>
+                                <div class="px-4 py-3 hover:bg-[#f3efe9] cursor-pointer text-sm font-medium text-stone-700 transition-colors dropdown-item-int" data-value="Mental Clarity">Mental Clarity</div>
+                                <div class="px-4 py-3 hover:bg-[#f3efe9] cursor-pointer text-sm font-medium text-stone-700 transition-colors dropdown-item-int" data-value="Spiritual Growth">Spiritual Growth</div>
+                                <div class="px-4 py-3 hover:bg-[#f3efe9] cursor-pointer text-sm font-medium text-stone-700 transition-colors dropdown-item-int" data-value="Other">Other</div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="interest" id="reg-input-interest" value="">
+                    </div>
+                </div>
+
+                <!-- Mode Dropdown -->
+                <div class="space-y-1">
+                    <label class="font-label text-xs uppercase tracking-widest text-stone-500 font-bold ml-1">Mode of Joining</label>
+                    <div class="relative custom-select" id="reg-dropdown-mode">
+                        <button type="button" class="w-full bg-[#f3efe9] text-stone-700 border-none rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-[#5c6e61] text-sm font-medium flex justify-between items-center cursor-pointer" id="reg-toggle-mode">
+                            <span id="reg-text-mode" class="text-stone-400">Select Mode</span>
+                            <span class="material-symbols-outlined text-lg transition-transform duration-300" id="reg-icon-mode">expand_more</span>
+                        </button>
+                        <div class="absolute z-50 w-full mt-2 bg-white rounded-xl shadow-2xl overflow-hidden hidden border border-stone-100 transition-all duration-200 opacity-0 scale-95 origin-top" id="reg-menu-mode">
+                            <div class="py-1">
+                                <div class="px-4 py-3 hover:bg-[#f3efe9] cursor-pointer text-sm font-medium text-stone-700 transition-colors dropdown-item-mod" data-value="Offline Studio">Offline (Bangalore Studio)</div>
+                                <div class="px-4 py-3 hover:bg-[#f3efe9] cursor-pointer text-sm font-medium text-stone-700 transition-colors dropdown-item-mod" data-value="Online">Online Interactive</div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="mode" id="reg-input-mode" value="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-4">
+                <button type="submit" class="w-full bg-[#59695d] text-white px-8 py-4 rounded-full font-label text-sm tracking-widest font-bold hover:bg-[#48564b] transition-all duration-300 shadow-md flex items-center justify-center gap-2">
+                    <span>Complete Registration</span>
+                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById("registration-modal");
+        const backdrop = document.getElementById("modal-backdrop");
+        const content = document.getElementById("modal-content");
+        const closeBtn = document.getElementById("close-modal");
+        
+        // Form Fields
+        const fName = document.getElementById("reg-name");
+        const fEmail = document.getElementById("reg-email");
+        const fInterestInput = document.getElementById("reg-input-interest");
+        const fInterestText = document.getElementById("reg-text-interest");
+
+        const openModal = () => {
+            modal.classList.remove("opacity-0", "pointer-events-none");
+            content.classList.remove("scale-95");
+            content.classList.add("scale-100");
+        };
+
+        const closeModal = () => {
+            modal.classList.add("opacity-0", "pointer-events-none");
+            content.classList.remove("scale-100");
+            content.classList.add("scale-95");
+        };
+
+        backdrop.addEventListener("click", closeModal);
+        closeBtn.addEventListener("click", closeModal);
+
+        const setupCustomDropdown = (dropdownId, toggleId, menuId, iconId, textId, inputId, itemClass) => {
+            const dropdown = document.getElementById(dropdownId);
+            const toggle = document.getElementById(toggleId);
+            const menu = document.getElementById(menuId);
+            const icon = document.getElementById(iconId);
+            const text = document.getElementById(textId);
+            const input = document.getElementById(inputId);
+            const items = document.querySelectorAll("." + itemClass);
+
+            const toggleMenu = () => {
+                const isHidden = menu.classList.contains("hidden");
+                // Close all other specific dropdowns in modal
+                document.querySelectorAll(".custom-select .absolute.z-50").forEach(m => {
+                   if(m !== menu) {
+                       m.classList.add("hidden", "opacity-0", "scale-95");
+                       m.classList.remove("opacity-100", "scale-100");
+                       const adjacentIcon = m.parentElement.querySelector(".material-symbols-outlined");
+                       if(adjacentIcon) adjacentIcon.style.transform = "rotate(0deg)";
+                   }
+                });
+
+                if (isHidden) {
+                    menu.classList.remove("hidden");
+                    setTimeout(() => {
+                        menu.classList.remove("opacity-0", "scale-95");
+                        menu.classList.add("opacity-100", "scale-100");
+                    }, 10);
+                    icon.style.transform = "rotate(180deg)";
+                } else {
+                    menu.classList.add("opacity-0", "scale-95");
+                    menu.classList.remove("opacity-100", "scale-100");
+                    icon.style.transform = "rotate(0deg)";
+                    setTimeout(() => {
+                        menu.classList.add("hidden");
+                    }, 200);
+                }
+            };
+
+            toggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+                toggleMenu();
+            });
+
+            items.forEach(item => {
+                item.addEventListener("click", (e) => {
+                    const value = item.getAttribute("data-value");
+                    text.textContent = item.textContent; // Show the nice text label
+                    text.classList.remove("text-stone-400");
+                    text.classList.add("text-stone-800");
+                    input.value = value;
+                    
+                    items.forEach(i => i.classList.remove("bg-stone-50", "border-l-4", "border-[#5c6e61]", "pl-3"));
+                    item.classList.add("bg-stone-50", "border-l-4", "border-[#5c6e61]", "pl-3");
+                    toggleMenu();
+                });
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!dropdown.contains(e.target) && !menu.classList.contains("hidden")) {
+                    toggleMenu();
+                }
+            });
+        };
+
+        // Initialize Custom Dropdowns
+        setupCustomDropdown("reg-dropdown-interest", "reg-toggle-interest", "reg-menu-interest", "reg-icon-interest", "reg-text-interest", "reg-input-interest", "dropdown-item-int");
+        setupCustomDropdown("reg-dropdown-mode", "reg-toggle-mode", "reg-menu-mode", "reg-icon-mode", "reg-text-mode", "reg-input-mode", "dropdown-item-mod");
+
+        // Global Event Delegation for Triggers
+        document.addEventListener("click", (e) => {
+            let target = e.target.closest("button") || e.target.closest("a");
+            if (!target) return;
+
+            // Exceptions for custom dropdowns (prevent intercepting their toggle buttons as modal triggers)
+            if (target.id === "reg-toggle-interest" || target.id === "reg-toggle-mode" || target.id === "dropdown-toggle") return;
+
+            const textBtnContent = target.textContent.trim().toLowerCase();
+            const triggerKeywords = ["start your journey", "register now", "join today"];
+            const isTrigger = triggerKeywords.some(kw => textBtnContent.includes(kw));
+
+            // In intercept-mode we check specifically if they clicked the exact sumbit inquiry button 
+            // inside the BEGIN YOUR BREATH block
+            const isSubmitInquiry = textBtnContent.includes("submit inquiry");
+
+            if (isTrigger || isSubmitInquiry) {
+                e.preventDefault();
+
+                if (isSubmitInquiry) {
+                    const form = target.closest("form");
+                    if (form) {
+                        const nameInput = form.querySelector('input[type="text"]');
+                        const emailInput = form.querySelector('input[type="email"]');
+                        const interestInput = form.querySelector('input[name="interest"]');
+
+                        if (nameInput) fName.value = nameInput.value;
+                        if (emailInput) fEmail.value = emailInput.value;
+                        if (interestInput && interestInput.value) {
+                            fInterestInput.value = interestInput.value;
+                            fInterestText.textContent = interestInput.value;
+                            fInterestText.classList.remove("text-stone-400");
+                            fInterestText.classList.add("text-stone-800");
+                        }
+                    }
+                } else {
+                    document.getElementById("global-registration-form").reset();
+                    // Reset dropdown UI
+                    fInterestText.textContent = "Select Area";
+                    fInterestText.classList.add("text-stone-400");
+                    fInterestText.classList.remove("text-stone-800");
+                    document.getElementById("reg-text-mode").textContent = "Select Mode";
+                    document.getElementById("reg-text-mode").classList.add("text-stone-400");
+                    document.getElementById("reg-text-mode").classList.remove("text-stone-800");
+                    
+                    document.querySelectorAll(".dropdown-item-int, .dropdown-item-mod").forEach(i => {
+                         i.classList.remove("bg-stone-50", "border-l-4", "border-[#5c6e61]", "pl-3");
+                    });
+                }
+
+                openModal();
+            }
+        });
+        
+        document.getElementById("global-registration-form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Registration Submitted Successfully!");
+            closeModal();
+            e.target.reset();
+        });
+    });
+</script>
+
+
+<!-- Page Transition Handler -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const internalLinks = document.querySelectorAll("a[href]");
+        internalLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                const targetUrl = link.href;
+                const currentHost = window.location.host;
+                const isInternal = targetUrl.includes(currentHost) || !targetUrl.startsWith('http');
+                const isAnchor = targetUrl.includes('#') && targetUrl.split('#')[0] === window.location.href.split('#')[0];
+                const isBlank = link.hasAttribute("target") && link.getAttribute("target") === "_blank";
+
+                // Only intercept internal standard links (not new tabs, not anchor links on same page)
+                if (isInternal && !isAnchor && !isBlank) {
+                    e.preventDefault();
+                    document.body.classList.add('page-transition-out');
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 350); // Matches the 0.4s fadeOut roughly
+                }
+            });
+        });
+    });
+</script>
+
+</body></html>
