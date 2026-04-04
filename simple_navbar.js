@@ -10,16 +10,15 @@ const navLinks = [
   { href: 'index.html',        label: 'Home' },
   { href: 'yoga-details.html', label: 'Classical Hatha Yoga' },
   { href: 'instructor.html',   label: 'About Instructor' },
-  { href: 'faq.html',          label: 'Benefits' },
-  { href: 'faq.html',          label: 'FAQ' },
+  { href: 'faq.html',          label: 'Benefits & FAQ' },
 ];
 
 const buildSimpleNav = (activeHref) => {
   const linkHtml = navLinks.map(link => {
     const isActive = link.href === activeHref;
     const cls = isActive
-      ? 'text-emerald-700 border-b-2 border-emerald-600 pb-0.5 font-label text-[11px] font-semibold uppercase tracking-[0.15em]'
-      : 'text-stone-500 font-label text-[11px] font-semibold uppercase tracking-[0.15em] hover:text-emerald-700 transition-colors duration-200';
+      ? 'text-emerald-700 border-b-2 border-emerald-600 pb-0.5 font-label text-[13px] font-semibold uppercase tracking-[0.15em]'
+      : 'text-stone-500 font-label text-[13px] font-semibold uppercase tracking-[0.15em] hover:text-emerald-700 transition-colors duration-200';
     return `<a class="${cls}" href="${link.href}">${link.label}</a>`;
   }).join('\n');
 
@@ -31,7 +30,7 @@ const buildSimpleNav = (activeHref) => {
 ${linkHtml}
   </div>
   <div class="hidden md:block">
-    <button class="bg-[#1a3d30] text-white px-7 py-3 rounded-full font-label text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-emerald-900 transition-colors duration-200">
+    <button class="bg-[#1a3d30] text-white px-7 py-3 rounded-full font-label text-[13px] font-bold uppercase tracking-[0.15em] hover:bg-emerald-900 transition-colors duration-200">
       Start Your Journey
     </button>
   </div>

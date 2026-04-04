@@ -21,13 +21,12 @@ const buildNav = (activeHref) => {
     { href: 'index.html', label: 'Home' },
     { href: 'yoga-details.html', label: 'Classical Hatha Yoga' },
     { href: 'instructor.html', label: 'About Instructor' },
-    { href: 'faq.html', label: 'Benefits' },
-    { href: 'faq.html', label: 'FAQ' },
+    { href: 'faq.html', label: 'Benefits & FAQ' },
   ];
 
   const linkHtml = links.map(link => {
     const isActive = link.href === activeHref;
-    const base = 'font-label text-xs uppercase tracking-widest nav-link';
+    const base = 'font-label text-[13px] font-semibold uppercase tracking-widest nav-link';
     const activeClass = isActive
       ? 'text-white/90 border-b-2 border-white/50 pb-1'
       : 'text-white/75 font-medium hover:text-white transition-colors duration-300';
@@ -41,7 +40,7 @@ const buildNav = (activeHref) => {
 <div class="hidden md:flex items-center space-x-10">
 ${linkHtml}
 </div>
-<div class="hidden md:block"><button class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-3 rounded-full font-label text-xs uppercase tracking-widest hover:bg-white hover:text-emerald-900 transition-all duration-300 shadow-sm nav-cta">
+<div class="hidden md:block"><button class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-3 rounded-full font-label text-[13px] font-bold uppercase tracking-widest hover:bg-white hover:text-emerald-900 transition-all duration-300 shadow-sm nav-cta">
                 Start Your Journey
             </button></div>
 <button id="mobile-menu-open" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30 transition-all duration-300" aria-label="Open menu">

@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
@@ -61,7 +61,7 @@
                         "inverse-surface": "#303031"
                     },
                     fontFamily: {
-                        "headline": ["Newsreader", "serif"],
+                        "headline": ["Cormorant Garamond", "serif"],
                         "body": ["Inter", "sans-serif"],
                         "label": ["Manrope", "sans-serif"]
                     },
@@ -72,6 +72,23 @@
     </script>
 <style>
         html, body { overflow-x: hidden; }
+        
+        p {
+            line-height: 1.8;
+            max-width: 75ch;
+        }
+
+        .quote-style {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #104738;
+            border-left: 4px solid #9cd2bd;
+            padding-left: 1.25rem;
+            margin: 2rem 0;
+            line-height: 1.6;
+            max-width: 65ch;
+        }
 
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -145,8 +162,7 @@
 <a class="text-white/90 border-b-2 border-white/50 pb-1 font-label text-xs uppercase tracking-widest nav-link" href="index.html">Home</a>
 <a class="text-white/75 font-medium font-label text-xs uppercase tracking-widest hover:text-white transition-colors duration-300 nav-link" href="yoga-details.html">Classical Hatha Yoga</a>
 <a class="text-white/75 font-medium font-label text-xs uppercase tracking-widest hover:text-white transition-colors duration-300 nav-link" href="instructor.html">About Instructor</a>
-<a class="text-white/75 font-medium font-label text-xs uppercase tracking-widest hover:text-white transition-colors duration-300 nav-link" href="faq.html">Benefits</a>
-<a class="text-white/75 font-medium font-label text-xs uppercase tracking-widest hover:text-white transition-colors duration-300 nav-link" href="faq.html">FAQ</a>
+<a class="text-white/75 font-medium font-label text-xs uppercase tracking-widest hover:text-white transition-colors duration-300 nav-link" href="faq.html">Benefits & FAQ</a>
 </div>
 <div class="hidden md:block"><button class="bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-3 rounded-full font-label text-xs uppercase tracking-widest hover:bg-white hover:text-emerald-900 transition-all duration-300 shadow-sm nav-cta">
                 Start Your Journey
@@ -170,14 +186,14 @@
 </div>
 <div class="relative z-10 w-full md:w-3/5 px-6 md:px-8 md:px-24 pt-28 pb-16 md:py-16 flex flex-col justify-center space-y-8">
 <div class="space-y-4">
-<h1 class="font-headline text-4xl md:text-3xl md:text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight">
+<h1 class="font-headline text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
                         Success Means Nothing Without Health
                     </h1>
 <p class="text-white/90 text-lg md:text-xl max-w-xl leading-relaxed">
                         You may achieve everything you call success — money, car, home — but without good health, can you truly enjoy it?
                     </p>
 </div>
-<div class="pl-6 border-l-4 border-secondary italic font-headline text-2xl text-white/80 py-2">
+<div class="quote-style text-white/90 border-secondary">
                     "Yoga is a technology that upgrades your internal system, allowing you to live a life of depth and balance."
                 </div>
 <div class="flex flex-wrap gap-4 pt-4">
@@ -197,7 +213,7 @@
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
 <div class="max-w-2xl space-y-4">
 <span class="font-label text-secondary font-bold uppercase tracking-[0.2em] text-sm">Ancient Wisdom</span>
-<h2 class="font-headline text-4xl md:text-4xl md:text-6xl text-on-surface leading-tight">Classical Hatha Yoga</h2>
+<h2 class="font-headline text-3xl md:text-5xl font-semibold text-on-surface leading-tight">Classical Hatha Yoga</h2>
 <p class="text-on-surface-variant text-lg leading-relaxed pt-2">
                             Hatha Yoga is about creating a body that is not a hurdle in your life, but a stepping stone toward higher possibilities. We offer yoga in its most authentic form.
                         </p>

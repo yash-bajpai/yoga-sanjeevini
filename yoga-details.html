@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Classical Hatha Yoga | Yoga Sanjeevini</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Inter:wght@100..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
@@ -64,7 +64,7 @@
                         "lavender-soft": "#E8DFF5"
                     },
                     fontFamily: {
-                        "headline": ["Newsreader"],
+                        "headline": ["Cormorant Garamond", "serif"],
                         "body": ["Inter"],
                         "label": ["Manrope"]
                     },
@@ -79,6 +79,24 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
+
+        p {
+            line-height: 1.8;
+            max-width: 75ch;
+        }
+
+        .quote-style {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #104738;
+            border-left: 4px solid #9cd2bd;
+            padding-left: 1.25rem;
+            margin: 2rem 0;
+            line-height: 1.6;
+            max-width: 65ch;
+        }
+
         .editorial-mask {
             mask-image: linear-gradient(to right, black 85%, transparent);
         }
@@ -148,8 +166,7 @@
 <a class="text-stone-500 font-label text-[11px] font-semibold uppercase tracking-[0.15em] hover:text-emerald-700 transition-colors duration-200" href="index.html">Home</a>
 <a class="text-emerald-700 border-b-2 border-emerald-600 pb-0.5 font-label text-[11px] font-semibold uppercase tracking-[0.15em]" href="yoga-details.html">Classical Hatha Yoga</a>
 <a class="text-stone-500 font-label text-[11px] font-semibold uppercase tracking-[0.15em] hover:text-emerald-700 transition-colors duration-200" href="instructor.html">About Instructor</a>
-<a class="text-stone-500 font-label text-[11px] font-semibold uppercase tracking-[0.15em] hover:text-emerald-700 transition-colors duration-200" href="faq.html">Benefits</a>
-<a class="text-stone-500 font-label text-[11px] font-semibold uppercase tracking-[0.15em] hover:text-emerald-700 transition-colors duration-200" href="faq.html">FAQ</a>
+<a class="text-stone-500 font-label text-[11px] font-semibold uppercase tracking-[0.15em] hover:text-emerald-700 transition-colors duration-200" href="faq.html">Benefits & FAQ</a>
   </div>
   <div class="hidden md:block">
     <button class="bg-[#1a3d30] text-white px-7 py-3 rounded-full font-label text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-emerald-900 transition-colors duration-200">
@@ -171,7 +188,7 @@
 <div class="relative z-10 max-w-screen-2xl mx-auto px-4 md:px-12 w-full grid grid-cols-1 md:grid-cols-2">
 <div class="max-w-2xl space-y-8">
 <span class="font-label text-xs uppercase tracking-[0.2em] text-secondary font-bold">The Path of Pure Yoga</span>
-<h1 class="font-headline text-4xl md:text-6xl md:text-3xl md:text-5xl md:text-8xl leading-[1.1] text-primary tracking-tight">
+<h1 class="font-headline text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-primary tracking-tight font-bold">
                         A precise, systematic, and efficient approach to <span class="italic">inner wellbeing.</span>
 </h1>
 <p class="text-on-surface-variant text-xl leading-relaxed max-w-lg">
@@ -202,9 +219,9 @@
 <div class="w-20 h-[2px] bg-secondary"></div>
 </div>
 <div class="prose prose-lg text-on-surface-variant max-w-none space-y-6">
-<p class="text-2xl font-serif italic text-primary leading-snug">
+<div class="quote-style text-primary">
                                 "Yoga is not an evolution of mind or body, it is a tool to transcend them."
-                            </p>
+                            </div>
 <p>Classical Hatha Yoga at Yoga Sanjeevini is taught as a holistic process. It stems from the Adiyogi, who first transmitted this science 15,000 years ago. We offer these practices exactly as they were intended—without dilution or modification.</p>
 <p>In the tradition of Isha, the practices are taught by highly trained instructors who have undergone intensive residential training, ensuring the sanctity and potency of the transmission remains intact.</p>
 </div>
@@ -271,7 +288,7 @@
 <section class="py-16 md:py-32 bg-lavender-soft/40 relative overflow-hidden">
 <div class="max-w-screen-2xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-12 relative z-10">
 <div class="md:col-span-8">
-<h2 class="font-headline text-3xl md:text-5xl md:text-3xl md:text-5xl md:text-7xl text-primary leading-tight mb-12">
+<h2 class="font-headline text-3xl md:text-5xl font-semibold text-primary leading-tight mb-12">
                         Why Isha <span class="italic">Hatha Yoga?</span>
 </h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -319,7 +336,7 @@
 <!-- Final CTA -->
 <section class="py-16 md:py-32 bg-primary text-on-primary">
 <div class="max-w-4xl mx-auto px-6 md:px-12 text-center space-y-12">
-<h2 class="font-headline text-3xl md:text-5xl md:text-3xl md:text-5xl md:text-7xl leading-tight">Start Your Transformation <span class="italic font-light">Today.</span></h2>
+<h2 class="font-headline text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4">Start Your Transformation <span class="italic font-light">Today.</span></h2>
 <p class="text-on-primary-container text-xl max-w-2xl mx-auto">Take the first step toward inner mastery. Our instructors are ready to guide you through the sacred science of Hatha Yoga.</p>
 <div class="flex flex-col md:flex-row gap-6 justify-center pt-8">
 <button class="bg-secondary text-white px-6 md:px-12 py-5 rounded-xl font-label text-sm uppercase tracking-widest font-bold hover:bg-white hover:text-primary transition-all">Book a Free Consultation</button>
