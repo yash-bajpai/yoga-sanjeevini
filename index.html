@@ -359,6 +359,7 @@
         const brand = nav.querySelector(".nav-brand");
         const links = nav.querySelectorAll(".nav-link");
         const cta = nav.querySelector(".nav-cta");
+        const mobileBtn = document.getElementById("mobile-menu-open");
 
         let isScrolled = false;
 
@@ -383,6 +384,10 @@
                 cta.classList.remove("bg-white/20", "border-white/30", "text-white", "hover:text-emerald-900");
                 cta.classList.add("bg-primary", "text-white", "border-transparent");
             }
+            if (mobileBtn) {
+                mobileBtn.classList.remove("bg-white/20", "text-white", "border-white/30");
+                mobileBtn.classList.add("bg-emerald-900/10", "text-emerald-900", "border-emerald-900/20");
+            }
         };
 
         const setTopState = () => {
@@ -400,6 +405,10 @@
             if (cta) {
                 cta.classList.add("bg-white/20", "border-white/30", "text-white", "hover:text-emerald-900");
                 cta.classList.remove("bg-primary", "border-transparent");
+            }
+            if (mobileBtn) {
+                mobileBtn.classList.add("bg-white/20", "text-white", "border-white/30");
+                mobileBtn.classList.remove("bg-emerald-900/10", "text-emerald-900", "border-emerald-900/20");
             }
         };
 
@@ -714,30 +723,7 @@
 </script>
 
 
-<!-- Page Transition Handler -->
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const internalLinks = document.querySelectorAll("a[href]");
-        internalLinks.forEach(link => {
-            link.addEventListener("click", (e) => {
-                const targetUrl = link.href;
-                const currentHost = window.location.host;
-                const isInternal = targetUrl.includes(currentHost) || !targetUrl.startsWith('http');
-                const isAnchor = targetUrl.includes('#') && targetUrl.split('#')[0] === window.location.href.split('#')[0];
-                const isBlank = link.hasAttribute("target") && link.getAttribute("target") === "_blank";
 
-                // Only intercept internal standard links (not new tabs, not anchor links on same page)
-                if (isInternal && !isAnchor && !isBlank) {
-                    e.preventDefault();
-                    document.body.classList.add('page-transition-out');
-                    setTimeout(() => {
-                        window.location.href = targetUrl;
-                    }, 350); // Matches the 0.4s fadeOut roughly
-                }
-            });
-        });
-    });
-</script>
 
 
 <script>
@@ -793,4 +779,5 @@
     })();
 </script>
 
+<script src="spa_router.js"></script>
 </body></html>
