@@ -113,6 +113,9 @@
         }
         .faq-accordion-header[aria-expanded="true"] .icon-plus { display: none; }
         .faq-accordion-header[aria-expanded="false"] .icon-minus { display: none; }
+        .faq-content { 
+            transition: max-height 0.5s cubic-bezier(0.2, 0, 0, 1), opacity 0.5s ease;
+        }
     
         .whatsapp-glow {
             box-shadow: 0 0 15px rgba(44, 95, 79, 0.4), 0 0 5px rgba(239, 189, 138, 0.3);
@@ -282,13 +285,14 @@
 <div class="space-y-6">
 <!-- FAQ Item 1 -->
 <div class="group border-none overflow-hidden rounded-lg transition-all duration-500 reveal-up" style="transition-delay: 100ms;">
-<button aria-expanded="false" class="faq-accordion-header w-full flex items-center justify-between p-8 text-left bg-[#FAF8F5] transition-colors hover:bg-surface-container-high">
-<span class="font-headline text-xl text-primary">Who can practice?</span>
-<div class="w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary">
-<span class="material-symbols-outlined icon-plus">add</span>
+<button aria-expanded="false" class="faq-accordion-header w-full flex items-center justify-between p-8 text-left bg-[#FAF8F5] transition-colors hover:bg-surface-container-high outline-none">
+<span class="font-headline text-xl text-primary font-semibold">Who can practice?</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary transition-all duration-300">
+<span class="material-symbols-outlined icon-plus text-2xl">add</span>
+<span class="material-symbols-outlined icon-minus text-2xl">remove</span>
 </div>
 </button>
-<div class="faq-content max-h-0 bg-surface-container-lowest overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.2,0,0,1)] border-l-4 border-secondary/0">
+<div class="faq-content max-h-0 bg-surface-container-lowest overflow-hidden border-l-4 border-secondary/0 opacity-0">
 <div class="p-8 pt-0 text-on-surface-variant leading-relaxed font-body">
                             Classical Hatha Yoga is designed for everyone. Regardless of age, physical condition, or lifestyle, these practices can be adapted to suit your unique needs and capacities.
                         </div>
@@ -296,41 +300,44 @@
 </div>
 <!-- FAQ Item 2 -->
 <div class="group border-none overflow-hidden rounded-lg transition-all duration-500 reveal-up" style="transition-delay: 200ms;">
-<button aria-expanded="false" class="faq-accordion-header w-full flex items-center justify-between p-8 text-left bg-[#FAF8F5] transition-colors hover:bg-surface-container-high">
-<span class="font-headline text-xl text-primary">Is prior experience required?</span>
-<div class="w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary">
-<span class="material-symbols-outlined icon-plus">add</span>
+<button aria-expanded="false" class="faq-accordion-header w-full flex items-center justify-between p-8 text-left bg-[#FAF8F5] transition-colors hover:bg-surface-container-high outline-none">
+<span class="font-headline text-xl text-primary font-semibold">Is prior experience required?</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary transition-all duration-300">
+<span class="material-symbols-outlined icon-plus text-2xl">add</span>
+<span class="material-symbols-outlined icon-minus text-2xl">remove</span>
 </div>
 </button>
-<div class="faq-content max-h-0 bg-surface-container-lowest overflow-hidden transition-all duration-700 border-l-4 border-secondary/0">
+<div class="faq-content max-h-0 bg-surface-container-lowest overflow-hidden border-l-4 border-secondary/0 opacity-0">
 <div class="p-8 pt-0 text-on-surface-variant leading-relaxed font-body">
                             No prior experience is necessary. Our introductory programs are specifically crafted for beginners to build a solid foundation from the ground up, ensuring safe and effective practice.
                         </div>
 </div>
 </div>
 <!-- FAQ Item 3 -->
-<div class="group border-none overflow-hidden rounded-lg transition-all duration-500">
-<button aria-expanded="false" class="faq-accordion-header w-full flex items-center justify-between p-8 text-left bg-[#FAF8F5] transition-colors hover:bg-surface-container-high">
-<span class="font-headline text-xl text-primary">How soon can I feel the benefits?</span>
-<div class="w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary">
-<span class="material-symbols-outlined icon-plus">add</span>
+<div class="group border-none overflow-hidden rounded-lg transition-all duration-500 reveal-up" style="transition-delay: 300ms;">
+<button aria-expanded="false" class="faq-accordion-header w-full flex items-center justify-between p-8 text-left bg-[#FAF8F5] transition-colors hover:bg-surface-container-high outline-none">
+<span class="font-headline text-xl text-primary font-semibold">How soon can I feel the benefits?</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary transition-all duration-300">
+<span class="material-symbols-outlined icon-plus text-2xl">add</span>
+<span class="material-symbols-outlined icon-minus text-2xl">remove</span>
 </div>
 </button>
-<div class="faq-content max-h-0 bg-surface-container-lowest overflow-hidden transition-all duration-700 border-l-4 border-secondary/0">
+<div class="faq-content max-h-0 bg-surface-container-lowest overflow-hidden border-l-4 border-secondary/0 opacity-0">
 <div class="p-8 pt-0 text-on-surface-variant leading-relaxed font-body">
                             Many practitioners report a sense of lightness and clarity after the very first session. Consistent practice over 2-3 weeks usually yields noticeable improvements in physical flexibility and mental calmness.
                         </div>
 </div>
 </div>
 <!-- FAQ Item 4 -->
-<div class="group border-none overflow-hidden rounded-lg transition-all duration-500">
-<button aria-expanded="false" class="faq-accordion-header w-full flex items-center justify-between p-8 text-left bg-[#FAF8F5] transition-colors hover:bg-surface-container-high">
-<span class="font-headline text-xl text-primary">Is it suitable for working professionals?</span>
-<div class="w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary">
-<span class="material-symbols-outlined icon-plus">add</span>
+<div class="group border-none overflow-hidden rounded-lg transition-all duration-500 reveal-up" style="transition-delay: 400ms;">
+<button aria-expanded="false" class="faq-accordion-header w-full flex items-center justify-between p-8 text-left bg-[#FAF8F5] transition-colors hover:bg-surface-container-high outline-none">
+<span class="font-headline text-xl text-primary font-semibold">Is it suitable for working professionals?</span>
+<div class="w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary transition-all duration-300">
+<span class="material-symbols-outlined icon-plus text-2xl">add</span>
+<span class="material-symbols-outlined icon-minus text-2xl">remove</span>
 </div>
 </button>
-<div class="faq-content max-h-0 bg-surface-container-lowest overflow-hidden transition-all duration-700 border-l-4 border-secondary/0">
+<div class="faq-content max-h-0 bg-surface-container-lowest overflow-hidden border-l-4 border-secondary/0 opacity-0">
 <div class="p-8 pt-0 text-on-surface-variant leading-relaxed font-body">
                             Absolutely. The practices are particularly beneficial for those with demanding careers, as they help manage stress, improve posture affected by desk work, and increase sustained energy levels throughout the day.
                         </div>
@@ -629,6 +636,41 @@
             alert("Registration Submitted Successfully!");
             closeModal();
             e.target.reset();
+        });
+    });
+
+    // FAQ Accordion Logic
+    document.addEventListener("DOMContentLoaded", () => {
+        const accordionHeaders = document.querySelectorAll('.faq-accordion-header');
+        
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const isExpanded = header.getAttribute('aria-expanded') === 'true';
+                const content = header.nextElementSibling;
+                
+                // Toggle current item
+                header.setAttribute('aria-expanded', !isExpanded);
+                if (!isExpanded) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    content.classList.remove('opacity-0', 'border-secondary/0');
+                    content.classList.add('opacity-100', 'border-secondary/100');
+                } else {
+                    content.style.maxHeight = "0px";
+                    content.classList.remove('opacity-100', 'border-secondary/100');
+                    content.classList.add('opacity-0', 'border-secondary/0');
+                }
+                
+                // Close others
+                accordionHeaders.forEach(otherHeader => {
+                    if (otherHeader !== header && otherHeader.getAttribute('aria-expanded') === 'true') {
+                        otherHeader.setAttribute('aria-expanded', 'false');
+                        const otherContent = otherHeader.nextElementSibling;
+                        otherContent.style.maxHeight = "0px";
+                        otherContent.classList.remove('opacity-100', 'border-secondary/100');
+                        otherContent.classList.add('opacity-0', 'border-secondary/0');
+                    }
+                });
+            });
         });
     });
 </script>
