@@ -75,7 +75,8 @@
         }
     </script>
 <style>
-        html, body { overflow-x: hidden; }
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; width: 100%; position: relative; }
 
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
@@ -118,13 +119,38 @@
         }
     
         /* Smooth Page Transitions */
-        body { animation: fadeIn 0.8s ease-out; }
+        body { animation: fadeIn 0.4s ease-out; }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         .page-transition-out { animation: fadeOut 0.4s ease-out forwards !important; }
 
         @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+        /* Scroll Reveal Animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-up.active, .reveal-left.active, .reveal-right.active, .reveal-scale.active {
+            opacity: 1;
+            transform: translate(0) scale(1);
+        }
     </style>
 </head>
 <body class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
@@ -189,10 +215,10 @@
 <div class="relative z-10 max-w-screen-2xl mx-auto px-4 md:px-12 w-full grid grid-cols-1 md:grid-cols-2">
 <div class="max-w-2xl space-y-8">
 <span class="font-label text-xs uppercase tracking-[0.2em] text-secondary font-bold">The Path of Pure Yoga</span>
-<h1 class="font-headline text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-primary tracking-tight font-bold">
+<h1 class="font-headline text-4xl md:text-5xl lg:text-6xl leading-[1.1] text-primary tracking-tight font-bold reveal-up">
                         A precise, systematic, and efficient approach to <span class="italic">inner wellbeing.</span>
 </h1>
-<p class="text-on-surface-variant text-xl leading-relaxed max-w-lg">
+<p class="text-on-surface-variant text-xl leading-relaxed max-w-lg reveal-up" style="transition-delay: 200ms;">
                         Yoga Sanjeevini brings the timeless wisdom of Isha Classical Hatha Yoga to the modern seeker. Not as an exercise, but as a gateway to liberation.
                     </p>
 <div class="flex flex-wrap gap-4 pt-4">
@@ -207,18 +233,18 @@
 <!-- The Lineage: Editorial Storytelling -->
 <section class="py-16 md:py-32 bg-lavender-soft/30">
 <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
+<div class="md:col-span-12 space-y-4 reveal-up text-center mb-12">
+    <h2 class="font-headline text-3xl md:text-5xl text-primary">Authentic Lineage</h2>
+    <div class="w-20 h-[2px] bg-secondary mx-auto"></div>
+</div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
-<div class="md:col-span-5 relative">
+<div class="md:col-span-5 relative reveal-left">
 <div class="aspect-[4/5] rounded-lg overflow-hidden card-shadow">
 <img class="w-full h-full object-cover" data-alt="Antique texture painting of a yogic sage in meditation with warm golden and earthy terracotta tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcyv8FjMztH3hqWKnGzfn1M5Uai-HdC8H4miL1-uRlpAy3Q_kHPgkoWjxf-qAEWjvjIH962HqqPgfK8sguDYUV0-ClEaNTXxsldM1X0S4wEcY3hhxHw5uGvbQwVaoHe45l4sVBI-KPrpgGjVJk2oBlXi3kDbI7_uOz1dAM-Uv1KFVoXBvUsVz6IOYOQQ_Om8S0NQk1fHgHE6oJeYa-uefTxhI0bqW5g2pWf7xcXMMx25pK8z8iZXp_xWxv56KvcTuEzRSXFzP0BM4"/>
 </div>
 
 </div>
-<div class="md:col-span-7 space-y-10">
-<div class="space-y-4">
-<h2 class="font-headline text-3xl md:text-5xl text-primary">Authentic Lineage</h2>
-<div class="w-20 h-[2px] bg-secondary"></div>
-</div>
+<div class="md:col-span-7 space-y-10 reveal-right">
 <div class="prose prose-lg text-on-surface-variant max-w-none space-y-6">
 <div class="quote-style text-primary">
                                 "Yoga is not an evolution of mind or body, it is a tool to transcend them."
@@ -244,13 +270,13 @@
 <!-- Feature Cards: Inner Science -->
 <section class="py-16 md:py-32 bg-surface">
 <div class="max-w-screen-2xl mx-auto px-6 md:px-12">
-<div class="mb-20 text-center max-w-2xl mx-auto">
+<div class="mb-20 text-center max-w-2xl mx-auto reveal-up">
 <span class="font-label text-xs uppercase tracking-[0.2em] text-secondary font-bold">Modular Learning</span>
 <h2 class="font-headline text-3xl md:text-5xl text-primary mt-4">The Science of Subtle Geometry</h2>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <!-- Card 1 -->
-<div class="bg-surface-container-lowest p-10 rounded-lg card-shadow hover:-translate-y-2 transition-all duration-500 group border border-transparent hover:border-secondary-container/30">
+<div class="bg-surface-container-lowest p-10 rounded-lg card-shadow hover:-translate-y-2 transition-all duration-500 group border border-transparent hover:border-secondary-container/30 reveal-up" style="transition-delay: 100ms;">
 <div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
 <span class="material-symbols-outlined text-primary group-hover:text-on-primary">self_improvement</span>
 </div>
@@ -261,7 +287,7 @@
 </div>
 </div>
 <!-- Card 2 -->
-<div class="bg-surface-container-lowest p-10 rounded-lg card-shadow hover:-translate-y-2 transition-all duration-500 group border border-transparent hover:border-secondary-container/30">
+<div class="bg-surface-container-lowest p-10 rounded-lg card-shadow hover:-translate-y-2 transition-all duration-500 group border border-transparent hover:border-secondary-container/30 reveal-up" style="transition-delay: 200ms;">
 <div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
 <span class="material-symbols-outlined text-primary group-hover:text-on-primary">psychology</span>
 </div>
@@ -272,7 +298,7 @@
 </div>
 </div>
 <!-- Card 3 -->
-<div class="bg-surface-container-lowest p-10 rounded-lg card-shadow hover:-translate-y-2 transition-all duration-500 group border border-transparent hover:border-secondary-container/30">
+<div class="bg-surface-container-lowest p-10 rounded-lg card-shadow hover:-translate-y-2 transition-all duration-500 group border border-transparent hover:border-secondary-container/30 reveal-up" style="transition-delay: 300ms;">
 <div class="w-16 h-16 bg-surface-container-low rounded-full flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
 <span class="material-symbols-outlined text-primary group-hover:text-on-primary">wb_sunny</span>
 </div>
@@ -314,29 +340,9 @@
 <!-- Decorative circle -->
 <div class="absolute -top-24 -left-24 w-96 h-96 bg-secondary-container/20 rounded-full blur-3xl"></div>
 </section>
-<!-- Gallery / Visual Journey -->
-<section class="py-16 md:py-32 bg-surface overflow-hidden">
-<div class="px-6 md:px-12 mb-12">
-<h2 class="font-headline text-4xl text-primary italic">A Visual Meditation</h2>
-</div>
-<div class="flex overflow-x-auto gap-8 px-6 md:px-12 zen-scroll editorial-mask">
-<div class="min-w-[400px] h-[500px] rounded-lg overflow-hidden flex-shrink-0">
-<img class="w-full h-full object-cover" data-alt="Close up of hands in a traditional mudra during yoga practice with soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC-CfbpXUcYKpXkrRFAGx8KZCeG8khcF-I4co9TXOJ9kHldKrUE0nOCs3kvRFd4Zz6qjypZCW5RengooffoQ1KEkk3QcxtO_15EVp59RmpQi5LVfssYfX72E_nGrmLZ4uMk5LVI3xFU7sjyEhhEvuQLfbdEzRpPlSziT_iCwfj9W-_2W-9PsyvlppJfwlauYKpKqZNEQHeX1Fu0KzPdSCM_0b2fbMpOeXyWvEtz1kRjGh6tiwoBnL03ylN2AQOPQukYieSuqAcveI"/>
-</div>
-<div class="min-w-[400px] h-[500px] rounded-lg overflow-hidden flex-shrink-0 mt-12">
-<img class="w-full h-full object-cover" data-alt="Person sitting in padmasana pose at sunset on a quiet beach with purple and orange sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoxHcr4ayP6sq9evlkUvMJ8jxJLU5wG6dtTtrz5L8lR7OShVnnOPrCjlz51tkbuwekXtx8B7D9FYWVXmM02ph93xAhl35Sjdob_Xxo8iJo1yXpILcN8h0iq9yvR3QHBvoEBezNDzMCi9-Dqb221xI1ROZU6tbNHGoAbFqpQh_sSUfEDBId5vLNhzkU9qcOrZm9uH9kvi-Li5MtPtuwjCKY0ZChW0igadP8aJ_fkwnFzdRWBYcUXqwygeL7IrWkdYLzNOAAfmieYDE"/>
-</div>
-<div class="min-w-[400px] h-[500px] rounded-lg overflow-hidden flex-shrink-0">
-<img class="w-full h-full object-cover" data-alt="Minimalist yoga studio with wooden floors and a single lit candle on a stone altar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDqXmNK-UTrWG6hEXeYK1CPOFo6pX1OuZd3E1AK-8z41tNn0ZZeBBM8kJNhXv3BPLoKQB4iyQeG5ooXlW67XrWdL6GFTY5USiMDiveYyJ1ARe98GGH97NMBiTKj93eNHxYqeTXK4Pm2AkjBvjQMPYYyZhviOuWAWPEdNpyKryzqi0Zq-Dcqxq6kSo11uyu9GmSCXA4CZ99hTn5NcLgQP3d1s1Nr7oz_AES9PFRO-yE8pr4A_Xprd3rsTUog_nTX8BFuB0zYoTWowY"/>
-</div>
-<div class="min-w-[400px] h-[500px] rounded-lg overflow-hidden flex-shrink-0 mt-12">
-<img class="w-full h-full object-cover" data-alt="Yoga practitioner in a deep forward bend, showing alignment and focus in a soft-lit room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhqWr6rFyLdgYq9olJ1si76olgwKoCceQ8lQU7_D_Ov3wiaHB0bG9RoRMRX2ar2SuV1Ng5XjfKoq4YbfeNd5bpjospTEnisQru224T4_kgvv5FSPLEi2SVYejqU2tBgr0k0T6ujSAD0ihQWuMUHWgtFCx9LIuDAghxf7kv0_ENWWz5MmXyJg90FnJrk1ukd5IsAI2wyPtyQIiyXETaCfL_u-D-GrMrvNulG7c25Smk2KPRc4t-usjPrlUS2E0kxg-06FywKPRLL3I"/>
-</div>
-</div>
-</section>
 <!-- Final CTA -->
 <section class="py-16 md:py-32 bg-primary text-on-primary">
-<div class="max-w-4xl mx-auto px-6 md:px-12 text-center space-y-12">
+<div class="max-w-4xl mx-auto px-6 md:px-12 text-center space-y-12 reveal-scale">
 <h2 class="font-headline text-3xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-4">Start Your Transformation <span class="italic font-light">Today.</span></h2>
 <p class="text-on-primary-container text-xl max-w-2xl mx-auto">Take the first step toward inner mastery. Our instructors are ready to guide you through the sacred science of Hatha Yoga.</p>
 <div class="flex flex-col md:flex-row gap-6 justify-center pt-8">
@@ -347,7 +353,7 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-stone-950 dark:bg-black text-stone-100 dark:text-stone-300 full-width py-16 px-6 md:px-12">
+<footer class="bg-stone-950 dark:bg-black text-stone-100 dark:text-stone-300 full-width py-16 px-6 md:px-12 reveal-up">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-screen-2xl mx-auto">
 <div class="space-y-6">
 <div class="text-xl font-serif text-white">Yoga Sanjeevini</div>
@@ -684,6 +690,29 @@
             });
         }
     })();
+</script>
+
+
+<!-- Scroll Reveal Observer -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const revealElements = document.querySelectorAll('[class*="reveal-"]');
+        revealElements.forEach(el => revealObserver.observe(el));
+    });
 </script>
 
 <script src="spa_router.js"></script>

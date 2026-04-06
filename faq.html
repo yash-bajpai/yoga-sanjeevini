@@ -74,7 +74,8 @@
         }
     </script>
 <style>
-        html, body { overflow-x: hidden; }
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; width: 100%; position: relative; }
 
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
@@ -119,13 +120,38 @@
         }
     
         /* Smooth Page Transitions */
-        body { animation: fadeIn 0.8s ease-out; }
+        body { animation: fadeIn 0.4s ease-out; }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         .page-transition-out { animation: fadeOut 0.4s ease-out forwards !important; }
 
         @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+        /* Scroll Reveal Animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-up.active, .reveal-left.active, .reveal-right.active, .reveal-scale.active {
+            opacity: 1;
+            transform: translate(0) scale(1);
+        }
     </style>
 </head>
 <body class="bg-background font-body text-on-surface overflow-x-hidden">
@@ -181,14 +207,14 @@
 </div>
 </nav>
 <!-- Hero / Intro for Page -->
-<header class="pt-[72px] py-24 px-6 md:px-12 max-w-screen-2xl mx-auto text-center">
+<header class="pt-[72px] py-24 px-6 md:px-12 max-w-screen-2xl mx-auto text-center reveal-up">
 <span class="font-label uppercase tracking-[0.2em] text-secondary text-sm mb-6 block">Holistic Wellness</span>
 <h1 class="font-headline text-4xl md:text-5xl lg:text-6xl text-primary leading-tight max-w-4xl mx-auto font-bold">Cultivate Vitality &amp; Inner Clarity</h1>
 </header>
 <!-- Benefits Section -->
 <section class="relative bg-gradient-to-br from-[#FAF8F5] to-[#FFE8DC] py-16 md:py-32 px-6 md:px-12 overflow-hidden">
 <div class="max-w-screen-2xl mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8 reveal-up">
 <h2 class="font-headline text-3xl md:text-5xl font-semibold text-primary max-w-xl">Benefits of Practice</h2>
 <p class="text-on-surface-variant max-w-md font-body text-lg leading-relaxed">
                     Our classical Hatha Yoga practices are designed to re-establish the system's natural alignment and unlock deeper dimensions of your existence.
@@ -196,7 +222,7 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
 <!-- Benefit Card 1 -->
-<div class="bg-surface-container-lowest rounded-lg p-10 benefit-card-lift">
+<div class="bg-surface-container-lowest rounded-lg p-10 benefit-card-lift reveal-up" style="transition-delay: 100ms;">
 <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-primary to-primary-container flex items-center justify-center mb-8 mx-auto">
 <span class="material-symbols-outlined text-white text-3xl" data-icon="fitness_center">fitness_center</span>
 </div>
@@ -204,7 +230,7 @@
 <p class="text-on-surface-variant text-center font-body leading-relaxed">Systematically strengthens muscles and ligaments while increasing the range of motion in the joints.</p>
 </div>
 <!-- Benefit Card 2 -->
-<div class="bg-surface-container-lowest rounded-lg p-10 benefit-card-lift">
+<div class="bg-surface-container-lowest rounded-lg p-10 benefit-card-lift reveal-up" style="transition-delay: 200ms;">
 <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-secondary to-secondary-container flex items-center justify-center mb-8 mx-auto">
 <span class="material-symbols-outlined text-white text-3xl" data-icon="psychology">psychology</span>
 </div>
@@ -212,7 +238,7 @@
 <p class="text-on-surface-variant text-center font-body leading-relaxed">Stabilizes the mind and sharpens cognitive focus, reducing the mental clutter of modern life.</p>
 </div>
 <!-- Benefit Card 3 -->
-<div class="bg-surface-container-lowest rounded-lg p-10 benefit-card-lift">
+<div class="bg-surface-container-lowest rounded-lg p-10 benefit-card-lift reveal-up" style="transition-delay: 300ms;">
 <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-tertiary to-tertiary-container flex items-center justify-center mb-8 mx-auto">
 <span class="material-symbols-outlined text-white text-3xl" data-icon="favorite">favorite</span>
 </div>
@@ -249,13 +275,13 @@
 <!-- FAQ Section -->
 <section class="py-16 md:py-32 px-6 md:px-12 bg-surface">
 <div class="max-w-[900px] mx-auto">
-<div class="text-center mb-20">
+<div class="text-center mb-20 reveal-up">
 <h2 class="font-headline text-3xl md:text-5xl text-primary mb-6">Frequently Asked Questions</h2>
 <div class="h-1 w-24 bg-secondary mx-auto rounded-full"></div>
 </div>
 <div class="space-y-6">
 <!-- FAQ Item 1 -->
-<div class="group border-none overflow-hidden rounded-lg transition-all duration-500">
+<div class="group border-none overflow-hidden rounded-lg transition-all duration-500 reveal-up" style="transition-delay: 100ms;">
 <button aria-expanded="false" class="faq-accordion-header w-full flex items-center justify-between p-8 text-left bg-[#FAF8F5] transition-colors hover:bg-surface-container-high">
 <span class="font-headline text-xl text-primary">Who can practice?</span>
 <div class="w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary">
@@ -269,7 +295,7 @@
 </div>
 </div>
 <!-- FAQ Item 2 -->
-<div class="group border-none overflow-hidden rounded-lg transition-all duration-500">
+<div class="group border-none overflow-hidden rounded-lg transition-all duration-500 reveal-up" style="transition-delay: 200ms;">
 <button aria-expanded="false" class="faq-accordion-header w-full flex items-center justify-between p-8 text-left bg-[#FAF8F5] transition-colors hover:bg-surface-container-high">
 <span class="font-headline text-xl text-primary">Is prior experience required?</span>
 <div class="w-10 h-10 flex items-center justify-center rounded-full border border-primary/20 text-primary">
@@ -315,7 +341,7 @@
 </section>
 <!-- Final CTA Section -->
 <section class="py-16 md:py-32 px-6 md:px-12 bg-surface-container-high">
-<div class="max-w-screen-xl mx-auto bg-primary rounded-lg p-16 md:p-24 relative overflow-hidden flex flex-col md:flex-row items-center gap-12">
+<div class="max-w-screen-xl mx-auto bg-primary rounded-lg p-16 md:p-24 relative overflow-hidden flex flex-col md:flex-row items-center gap-12 reveal-scale">
 <!-- Decorative Elements -->
 <div class="absolute top-0 right-0 w-96 h-96 bg-primary-container rounded-full blur-[100px] opacity-30 -translate-y-1/2 translate-x-1/2"></div>
 <div class="relative z-10 flex-1">
@@ -330,7 +356,7 @@
 </div>
 </section>
 <!-- Footer Shell -->
-<footer class="bg-stone-950 text-stone-100 py-24 px-6 md:px-12">
+<footer class="bg-stone-950 text-stone-100 py-24 px-6 md:px-12 reveal-up">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-16 w-full max-w-screen-2xl mx-auto">
 <div class="space-y-8">
 <div class="text-xl font-serif text-white">Yoga Sanjeevini</div>
@@ -662,6 +688,29 @@
             });
         }
     })();
+</script>
+
+
+<!-- Scroll Reveal Observer -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const revealElements = document.querySelectorAll('[class*="reveal-"]');
+        revealElements.forEach(el => revealObserver.observe(el));
+    });
 </script>
 
 <script src="spa_router.js"></script>

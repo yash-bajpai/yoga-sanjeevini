@@ -74,7 +74,8 @@
       }
     </script>
 <style>
-        html, body { overflow-x: hidden; }
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; width: 100%; position: relative; }
 
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -109,13 +110,38 @@
         }
     
         /* Smooth Page Transitions */
-        body { animation: fadeIn 0.8s ease-out; }
+        body { animation: fadeIn 0.4s ease-out; }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         .page-transition-out { animation: fadeOut 0.4s ease-out forwards !important; }
 
         @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+        /* Scroll Reveal Animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-up.active, .reveal-left.active, .reveal-right.active, .reveal-scale.active {
+            opacity: 1;
+            transform: translate(0) scale(1);
+        }
     </style>
 </head>
 <body class="bg-background font-body text-on-surface selection:bg-secondary-container">
@@ -187,7 +213,7 @@
 <div class="h-px bg-outline-variant/30 flex-grow ml-6"></div>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-<div class="relative aspect-video rounded-lg overflow-hidden group">
+<div class="relative aspect-video rounded-lg overflow-hidden group reveal-up" style="transition-delay: 0.2s;">
 <video class="w-full h-full object-cover" controls playsinline>
     <source src="practice1.mp4" type="video/mp4"/>
 </video>
@@ -195,7 +221,7 @@
 <p class="text-white font-label text-xs uppercase tracking-widest bg-black/40 px-2 py-1 rounded">Surya Kriya Flow</p>
 </div>
 </div>
-<div class="relative aspect-video rounded-lg overflow-hidden group">
+<div class="relative aspect-video rounded-lg overflow-hidden group reveal-up" style="transition-delay: 0.4s;">
 <video class="w-full h-full object-cover" controls playsinline>
     <source src="practice2.mp4" type="video/mp4"/>
 </video>
@@ -207,7 +233,7 @@
 </div>
 </div>
 <!-- Right: Content & Bio (40%) -->
-<div class="lg:col-span-4 sticky top-32 space-y-12">
+<div class="lg:col-span-4 sticky top-32 space-y-12 reveal-right">
 <div class="space-y-4">
 <span class="font-label uppercase tracking-[0.2em] text-xs text-secondary block">Your Guide</span>
 <h1 class="font-headline text-3xl md:text-5xl lg:text-6xl text-primary leading-tight font-bold">Meet Your Instructor</h1>
@@ -229,21 +255,21 @@
 </div>
 <!-- Highlights Bento-ish List -->
 <div class="space-y-4 pt-4">
-<div class="flex items-start gap-4 p-6 bg-surface-container-low rounded-lg border-l-4 border-secondary/30">
+<div class="flex items-start gap-4 p-6 bg-surface-container-low rounded-lg border-l-4 border-secondary/30 reveal-up" style="transition-delay: 0.2s;">
 <span class="material-symbols-outlined text-primary">check_circle</span>
 <div>
 <p class="font-label text-xs uppercase tracking-widest text-primary font-bold mb-1">Authentic Certification</p>
 <p class="text-sm opacity-80">Certified Classical Hatha Yoga Instructor</p>
 </div>
 </div>
-<div class="flex items-start gap-4 p-6 bg-surface-container-low rounded-lg">
+<div class="flex items-start gap-4 p-6 bg-surface-container-low rounded-lg reveal-up" style="transition-delay: 0.4s;">
 <span class="material-symbols-outlined text-primary">history_edu</span>
 <div>
 <p class="font-label text-xs uppercase tracking-widest text-primary font-bold mb-1">Traditional Training</p>
 <p class="text-sm opacity-80">Extensive residential training at Isha Foundation</p>
 </div>
 </div>
-<div class="flex items-start gap-4 p-6 bg-surface-container-low rounded-lg">
+<div class="flex items-start gap-4 p-6 bg-surface-container-low rounded-lg reveal-up" style="transition-delay: 0.6s;">
 <span class="material-symbols-outlined text-primary">auto_awesome</span>
 <div>
 <p class="font-label text-xs uppercase tracking-widest text-primary font-bold mb-1">Ancient Lineage</p>
@@ -257,11 +283,11 @@
 </main>
 <!-- Zen Carousel Section: Student Testimonials (Asymmetrical) -->
 <section class="bg-surface-container-low py-24 overflow-hidden">
-<div class="max-w-screen-2xl mx-auto px-6 md:px-6 md:px-12 mb-12">
+<div class="max-w-screen-2xl mx-auto px-6 md:px-6 md:px-12 mb-12 reveal-up">
 <h2 class="font-headline text-4xl text-primary mb-2">Student Reflections</h2>
 <p class="text-on-surface-variant">Experiences shared by practitioners under Sanjeevini's guidance.</p>
 </div>
-<div class="flex gap-8 px-6 md:px-6 md:px-12 overflow-x-auto pb-12 mask-gradient-edge no-scrollbar">
+<div class="flex gap-8 px-6 md:px-6 md:px-12 overflow-x-auto pb-12 mask-gradient-edge no-scrollbar reveal-up" style="transition-delay: 0.2s;">
 <!-- Testimonial 1 -->
 <div class="min-w-[320px] md:min-w-[450px] bg-surface-container-lowest p-10 rounded-lg shadow-[0_20px_40px_rgba(43,43,43,0.04)]">
 <span class="material-symbols-outlined text-secondary text-4xl mb-6">format_quote</span>
@@ -301,7 +327,7 @@
 </div>
 </section>
 <!-- Footer -->
-<footer class="bg-stone-950 dark:bg-black py-16 px-6 md:px-12 text-stone-100">
+<footer class="bg-stone-950 dark:bg-black py-16 px-6 md:px-12 text-stone-100 reveal-up">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-screen-2xl mx-auto">
 <div class="space-y-6">
 <div class="text-xl font-serif text-white">Yoga Sanjeevini</div>
@@ -651,6 +677,29 @@
             });
         }
     })();
+</script>
+
+
+<!-- Scroll Reveal Observer -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const revealElements = document.querySelectorAll('[class*="reveal-"]');
+        revealElements.forEach(el => revealObserver.observe(el));
+    });
 </script>
 
 <script src="spa_router.js"></script>

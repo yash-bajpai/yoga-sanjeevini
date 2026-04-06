@@ -3,6 +3,7 @@
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="Authentic Classical Hatha Yoga at Yoga Sanjeevini. Programs designed to transform your life through in-person, online, and corporate wellness sessions." />
 <link rel="icon" type="image/png" href="favicon.png">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
@@ -72,7 +73,8 @@
         }
     </script>
 <style>
-        html, body { overflow-x: hidden; }
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; width: 100%; position: relative; }
         
         p {
             line-height: 1.8;
@@ -113,13 +115,39 @@
         }
     
         /* Smooth Page Transitions */
-        body { animation: fadeIn 0.8s ease-out; }
+        body { animation: fadeIn 0.4s ease-out; }
 
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         .page-transition-out { animation: fadeOut 0.4s ease-out forwards !important; }
 
         @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+
+        /* Scroll Reveal Animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 0.9s cubic-bezier(0.2, 0, 0, 1);
+        }
+        .reveal-up.active, .reveal-left.active, .reveal-right.active, .reveal-scale.active {
+            opacity: 1;
+            transform: translate(0) scale(1);
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
@@ -186,7 +214,7 @@
 <div class="absolute inset-0 bg-black/50 md:bg-gradient-to-r md:from-black/60 md:via-black/20 md:to-transparent"></div>
 </div>
 <div class="relative z-10 w-full md:w-3/5 px-6 md:px-8 md:px-24 pt-28 pb-16 md:py-16 flex flex-col justify-center space-y-8">
-<div class="space-y-4">
+<div class="space-y-4 reveal-up">
 <h1 class="font-headline text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
                         Success Means Nothing Without Health
                     </h1>
@@ -194,10 +222,10 @@
                         You may achieve everything you call success — money, car, home — but without good health, can you truly enjoy it?
                     </p>
 </div>
-<div class="quote-style text-white/90 border-secondary">
+<div class="quote-style text-white/90 border-secondary reveal-up" style="transition-delay: 200ms;">
                     "Yoga is a technology that upgrades your internal system, allowing you to live a life of depth and balance."
                 </div>
-<div class="flex flex-wrap gap-4 pt-4">
+<div class="flex flex-wrap gap-4 pt-4 reveal-up" style="transition-delay: 400ms;">
 <button class="flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-xl font-medium hover:scale-[0.98] transition-all duration-300 group shadow-lg">
 <span>Get Started</span>
 <span class="material-symbols-outlined text-lg" data-icon="chat">chat</span>
@@ -208,65 +236,58 @@
 </div>
 </div>
 </section>
-<!-- Ancient Wisdom Section -->
-<section class="py-24 px-8 md:px-24 bg-surface">
-<div class="max-w-screen-2xl mx-auto">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-<div class="max-w-2xl space-y-4">
-<span class="font-label text-secondary font-bold uppercase tracking-[0.2em] text-sm">Ancient Wisdom</span>
-<h2 class="font-headline text-3xl md:text-5xl font-semibold text-on-surface leading-tight">Classical Hatha Yoga</h2>
-<p class="text-on-surface-variant text-lg leading-relaxed pt-2">
-                            Hatha Yoga is about creating a body that is not a hurdle in your life, but a stepping stone toward higher possibilities. We offer yoga in its most authentic form.
-                        </p>
-</div>
-<div class="hidden md:block pb-2">
-<a class="font-headline italic text-secondary text-xl border-b-2 border-secondary pb-1 hover:text-tertiary transition-colors" href="#">View All Programs</a>
-</div>
-</div>
-<!-- Category Cards - Bento Style -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-<!-- Card 1 -->
-<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_20px_40px_rgba(43,43,43,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-<div class="h-96 overflow-hidden">
-<img alt="Classical Yoga Practice" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700" data-alt="Close up of serene hand mudra during yoga practice with soft morning light and atmospheric dust particles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd9SVx12bDV1BaiRULZh-QsYmEiE1lgWZceMP-8WiXkLEl5tXIER53giVOLUH29Hno--Tz8rZjGjsKin2n1YcEWbi7nVXG3VcsoSFySQzviV2lVXMb6twE2zU9dE0CSA8FcFqUNLMt3oj5uEIGnFhnABrOeg1GnJXp8C41S7puDmkVKK8nwEBFMjMWsU5LzBLLFzpqeBCUMLWxizoznRPIKMBe93FM6Sha8ETc2cxUC9tvt3K1xTxvcnb3rxA2HSIXxBop-NZUim4"/>
-</div>
-<div class="p-10 space-y-4">
-<h3 class="font-headline text-3xl text-on-surface">Classical &amp; Authentic</h3>
-<p class="text-on-surface-variant leading-relaxed">
-                                Experience yoga as it was meant to be shared. No filters, no modifications, just pure transmission of ancient sciences.
-                            </p>
-<div class="pt-4 flex items-center text-primary font-medium gap-2">
-<span>Learn the practice</span>
-<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</div>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_20px_40px_rgba(43,43,43,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-<div class="h-96 overflow-hidden">
-<img alt="Yoga Science" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700" data-alt="Interior of a minimalist wooden yoga studio with sunlight streaming through large windows hitting a single mat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDpzWK5VtOLcWGtMvtgrVyXz9XmKsHH7keOau1h2MiOlrMJncuxpOVmuQIRuV3nTqEf4PXzX-GeoWeYzH_yGF3XOoeek_3imT44_HfIgWyxt9KDwF72-mVNl1oCicksgGX6yGTXhHJ3Gjz-GAx3OPeqk7i7Qd1lrhGm0Eaekwr5gnMVv0RzVuv1yBUVb5FcsE7nH0nFrvasokc_gdhGtrH3k2sHvUmnx5FP2E1jUP84LK-xfYd9WFtq93lyKfO-xlXYlZYePgP3vw"/>
-</div>
-<div class="p-10 space-y-4">
-<h3 class="font-headline text-3xl text-on-surface">An Inner Science</h3>
-<p class="text-on-surface-variant leading-relaxed">
-                                A profound technology that prepares the body for higher dimensions of energy and awareness. It is a journey within.
-                            </p>
-<div class="pt-4 flex items-center text-primary font-medium gap-2">
-<span>Explore the science</span>
-<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+<!-- Our Programs Section -->
+<section id="programs-section" class="py-24 px-8 md:px-24 bg-surface">
+    <div class="max-w-screen-2xl mx-auto text-center mb-16 space-y-4 reveal-up">
+        <h2 class="font-headline text-4xl md:text-5xl font-bold text-emerald-950">Our Programs</h2>
+        <p class="text-stone-600 text-lg max-w-2xl mx-auto leading-relaxed">
+            Embark on a journey of self-discovery with our carefully crafted programs designed to transform your life
+        </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-screen-2xl mx-auto">
+        <!-- In-Person -->
+        <div class="flex flex-col space-y-6 reveal-up" style="transition-delay: 100ms;">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+                <img src="in-person.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="In-Person Yoga Sessions">
+            </div>
+            <div class="space-y-4">
+                <span class="inline-block px-3 py-1 bg-[#4A5D45] text-white text-[10px] uppercase tracking-widest font-bold rounded-md">In-Person</span>
+                <h3 class="font-headline text-3xl text-emerald-950 font-bold">In-Person Sessions</h3>
+                <p class="text-stone-600 text-base leading-relaxed">Experience the power of direct guidance in intimate group settings</p>
+            </div>
+        </div>
+        <!-- Live Online -->
+        <div class="flex flex-col space-y-6 reveal-up" style="transition-delay: 300ms;">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+                <img src="online.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Live Online Yoga Sessions">
+            </div>
+            <div class="space-y-4">
+                <span class="inline-block px-3 py-1 bg-[#4A5D45] text-white text-[10px] uppercase tracking-widest font-bold rounded-md">Live Online</span>
+                <h3 class="font-headline text-3xl text-emerald-950 font-bold">Live Online Sessions</h3>
+                <p class="text-stone-600 text-base leading-relaxed">Join from anywhere with our interactive live sessions</p>
+            </div>
+        </div>
+        <!-- Corporate -->
+        <div class="flex flex-col space-y-6 reveal-up" style="transition-delay: 500ms;">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group">
+                <img src="corporate.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Corporate Wellness Program">
+            </div>
+            <div class="space-y-4">
+                <span class="inline-block px-3 py-1 bg-[#4A5D45] text-white text-[10px] uppercase tracking-widest font-bold rounded-md">Corporate</span>
+                <h3 class="font-headline text-3xl text-emerald-950 font-bold">Corporate Wellness</h3>
+                <p class="text-stone-600 text-base leading-relaxed">Bring wellbeing to your workplace with customized programs</p>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Begin Your Breath Inquiry Section -->
 <section class="py-24 px-8 md:px-24 bg-surface" id="contact-form-section">
     <div class="max-w-screen-xl mx-auto">
-        <div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_20px_40px_rgba(43,43,43,0.08)] flex flex-col md:flex-row">
+        <div class="bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_20px_40px_rgba(43,43,43,0.08)] flex flex-col md:flex-row reveal-up">
             
             <!-- Left Side: Image and Overlay -->
-            <div class="w-full md:w-1/2 relative bg-[#352F26] flex items-center justify-center p-12 min-h-[400px]">
+            <div class="w-full md:w-1/2 relative bg-[#352F26] flex items-center justify-center p-12 min-h-[400px] reveal-left">
                 <img class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC-CfbpXUcYKpXkrRFAGx8KZCeG8khcF-I4co9TXOJ9kHldKrUE0nOCs3kvRFd4Zz6qjypZCW5RengooffoQ1KEkk3QcxtO_15EVp59RmpQi5LVfssYfX72E_nGrmLZ4uMk5LVI3xFU7sjyEhhEvuQLfbdEzRpPlSziT_iCwfj9W-_2W-9PsyvlppJfwlauYKpKqZNEQHeX1Fu0KzPdSCM_0b2fbMpOeXyWvEtz1kRjGh6tiwoBnL03ylN2AQOPQukYieSuqAcveI" alt="Singing bowl and meditation vibes" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                 <div class="relative z-10 text-center space-y-6 max-w-sm mt-auto mb-8">
@@ -313,7 +334,7 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-stone-950 dark:bg-black full-width py-16 px-6 md:px-12 text-stone-100">
+<footer class="bg-stone-950 dark:bg-black text-stone-100 dark:text-stone-300 full-width py-16 px-6 md:px-12 reveal-up">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-screen-2xl mx-auto">
 <div class="space-y-6">
 <div class="text-xl font-serif text-white tracking-tight font-headline">Yoga Sanjeevini</div>
@@ -419,6 +440,18 @@
                 setTopState();
             }
         });
+
+        // Initialize Scroll Reveal Observer
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target); // Stop observing once revealed
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     });
 </script>
     <script>
@@ -777,6 +810,29 @@
             });
         }
     })();
+</script>
+
+
+<!-- Scroll Reveal Observer -->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const revealElements = document.querySelectorAll('[class*="reveal-"]');
+        revealElements.forEach(el => revealObserver.observe(el));
+    });
 </script>
 
 <script src="spa_router.js"></script>
